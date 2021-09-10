@@ -6,7 +6,8 @@ const login = {
     'btnEntrar': '[data-testid=entrar]',
     'btnSair': '[data-testid=logout]',
     'textAlert': '.alert',
-    'textAlertUm': ':nth-child(4) > .alert',
-    'textAlertDois': ':nth-child(5) > .alert'
+    'textAlertnome': ':nth-child(3) > .alert',
+    'textAlertEmail': ':nth-child(4) > .alert',
+    'textAlertPassword': ':nth-child(5) > .alert'
 }
 export default login;

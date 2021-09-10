@@ -1,25 +1,25 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+/// <reference types="Cypress" />
+import login from '../page/login.page'
+import createUser from '../page/createUser.page'
+
+Cypress.Commands.add('login', (user, password) => {
+    cy.CreateUserFix()
+    cy.get(login.imputEmail).type(user)
+    cy.get(login.imputSenha).type(password)
+    cy.get(login.btnEntrar).click()
+})
+
+Cypress.Commands.add('createUserAdm', (name, email, password) => {
+    cy.get(createUser.imputNome).type(name)
+    cy.get(createUser.imputEmail).type(email)
+    cy.get(createUser.imputSenha).type(password)
+    cy.get(createUser.btnCadastrarAdm).click()
+    cy.get(createUser.btnCadastrar).click()
+})
+
+Cypress.Commands.add('createUser', (name, email, password) => {
+    cy.get(createUser.imputNome).type(name)
+    cy.get(createUser.imputEmail).type(email)
+    cy.get(createUser.imputSenha).type(password)
+    cy.get(createUser.btnCadastrar).click()
+})
