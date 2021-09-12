@@ -11,9 +11,8 @@ describe('testes de login', ()=>{
     beforeEach(()=>{
         visit()
     })
-
+    
     it('valida página de login', ()=>{
-        cy.login(login.user, login.password)
         validaUrl('https://front.serverest.dev/login')
     })
 
