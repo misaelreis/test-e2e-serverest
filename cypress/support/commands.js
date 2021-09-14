@@ -23,3 +23,18 @@ Cypress.Commands.add('createUser', (name, email, password) => {
     cy.get(createUser.imputSenha).type(password)
     cy.get(createUser.btnCadastrar).click()
 })
+
+Cypress.Commands.add('createUserAdminAdm', (name, email, password) => {
+    cy.get(createUser.imputNome).type(name)
+    cy.get(createUser.imputEmail).type(email)
+    cy.get(createUser.imputSenha).type(password)
+    cy.get(createUser.btnCadastrarAdm).click()
+    cy.get(createUser.btnCadastrarAdmin).click()
+})
+
+Cypress.Commands.add('createAdminUser', (name, email, password) => {
+    cy.get(createUser.imputNome).type(name)
+    cy.get(createUser.imputEmail).type(email)
+    cy.get(createUser.imputSenha).type(password)
+    cy.get(createUser.btnCadastrarAdmin).click()
+})

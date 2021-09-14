@@ -5,8 +5,8 @@ Cypress.Commands.add('createUserFix', () => {
         Headers:{'accept':'/'},
         url: 'https://serverest.dev/usuarios',
         body:{
-            "nome": "Misael Reis",
-            "email": "misael@qa.com.br",
+            "nome": "Misael Adm",
+            "email": "misael@gmail.com.br",
             "password": "teste",
             "administrador": "true"
         }
@@ -33,12 +33,12 @@ Cypress.Commands.add('createLoginAdm', () => {
         Headers:{'accept':'/'},
         url: 'https://serverest.dev/login',
         body:{
-            "email": "misael@gmail.com",
+            "email": "misael@gmail.com.br",
             "password": "teste"
         }
     }).then(({body}) => {
-        window.localStorage.setItem('serverest/userNome', 'Misael Reis')
-        window.localStorage.setItem('serverest/userEmail','misael@qa.com.br')
+        window.localStorage.setItem('serverest/userNome', 'Misael Adm')
+        window.localStorage.setItem('serverest/userEmail','misael@gmail.com.br')
         window.localStorage.setItem('serverest/userToken', JSON.stringify(body.authorization))
     })
 })
@@ -50,12 +50,12 @@ Cypress.Commands.add('createLoginUser', () => {
         Headers:{'accept':'/'},
         url: 'https://serverest.dev/login',
         body:{
-            "email": "misael@email.com",
+            "email": "misael@gmail.com",
             "password": "teste"
         }
     }).then(({body}) => {
         window.localStorage.setItem('serverest/userNome', 'Misael Usuario')
-        window.localStorage.setItem('serverest/userEmail','misael@qa.com.br')
+        window.localStorage.setItem('serverest/userEmail','misael@gmail.com')
         window.localStorage.setItem('serverest/userToken', JSON.stringify(body.authorization))
     })
 })

@@ -5,6 +5,7 @@ const user = {
     'txtAlertLink' : '.alert-link',
     'btnCadastrarAdm' : '[data-testid=checkbox]',
     'btnCadastrar' : '[data-testid=cadastrar]',
+    'btnCadastrarAdmin' : '[data-testid=cadastrarUsuario]',
     'btnEntrar': '[data-testid=entrar]',
 }
 export default user
