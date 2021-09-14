@@ -3,17 +3,16 @@
 import{ visit, validaTexto, validaUrl, clicar, digitar }from "../actions/principal.action";
 import loginPage from '../page/login.page'
 
-describe('testes de login', ()=>{
+describe('Testes de Login', ()=>{
     const login = {
-        user: 'misael@qa.com.br',
+        user: 'misael@gmail.com.br',
         password: 'teste'
     }
     beforeEach(()=>{
         visit()
     })
-
+    
     it('valida página de login', ()=>{
-        cy.login(login.user, login.password)
         validaUrl('https://front.serverest.dev/login')
     })
 
