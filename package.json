@@ -12,7 +12,9 @@
   "author": "Misael Reis",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^8.3.1",
     "faker": "5.5.3"
+  },
+  "devDependencies": {
+    "cypress": "^8.4.0"
   }
 }

@@ -27,15 +27,15 @@ describe('Testes - Cadastro de usuário', ()=>{
         user.email = faker.internet.email()
         cy.createUserAdm(user.name, user.email, user.password)
         validaElementoVisivel(login.textAlert)
-        validaTexto(userPage.txtAlertLink, 'Cadastro realizado com sucesso')
+        validaTexto(userPage.textAlertLink, 'Cadastro realizado com sucesso')
         validaUrl('https://front.serverest.dev/admin/home')
     })
 
-    it('valida cadastro usuário adm sucesso', ()=>{
+    it('valida cadastro usuário sucesso', ()=>{
         user.email = faker.internet.email()
         cy.createUser(user.name, user.email, user.password)
         validaElementoVisivel(login.textAlert)
-        validaTexto(userPage.txtAlertLink, 'Cadastro realizado com sucesso')
+        validaTexto(userPage.textAlertLink, 'Cadastro realizado com sucesso')
         validaUrl('https://front.serverest.dev/home')
     })
 

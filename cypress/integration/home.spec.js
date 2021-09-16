@@ -1,7 +1,6 @@
 /// <reference types = "Cypress" />
 
 import{ visit, validaTexto, validaUrl, clicar, digitar, validaElementoVisivel }from "../actions/principal.action";
-import loginPage from '../page/login.page'
 import homePage from '../page/home.Page'
 
 describe('Testes Home - Adm', ()=>{
@@ -114,16 +113,5 @@ describe('Testes Home - User', ()=>{
     it('Logout', ()=>{
         clicar(homePage.btnlogout)
         validaUrl('https://front.serverest.dev/login')
-    })
-
-    it('Valida produtos', ()=>{
-        validaElementoVisivel(homePage.produtoUm)
-        validaElementoVisivel(homePage.adicionarProdutoUm)
-    })
-
-    it('Pesquisa produto inexistente', ()=>{
-        digitar(homePage.inputPesquisar, 'test')
-        clicar(homePage.btnPesquisar)
-        validaTexto(homePage.textProdutoNaoEncontrado, 'Nenhum produto foi encontrado')
     })
 })
