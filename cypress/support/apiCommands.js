@@ -1,3 +1,10 @@
+const faker = require('faker')
+const user = {
+    name: faker.name.firstName(),
+    email : faker.internet.email(),
+    password: 'teste'
+}
+
 Cypress.Commands.add('createUserFix', () => {
     cy.request({
         method: 'POST',
@@ -39,7 +46,7 @@ Cypress.Commands.add('createLoginAdm', () => {
     }).then(({body}) => {
         window.localStorage.setItem('serverest/userNome', 'Misael Adm')
         window.localStorage.setItem('serverest/userEmail','misael@gmail.com.br')
-        window.localStorage.setItem('serverest/userToken', JSON.stringify(body.authorization))
+        window.localStorage.setItem('serverest/userToken', (body.authorization))
     })
 })
 
@@ -56,6 +63,6 @@ Cypress.Commands.add('createLoginUser', () => {
     }).then(({body}) => {
         window.localStorage.setItem('serverest/userNome', 'Misael Usuario')
         window.localStorage.setItem('serverest/userEmail','misael@gmail.com')
-        window.localStorage.setItem('serverest/userToken', JSON.stringify(body.authorization))
+        window.localStorage.setItem('serverest/userToken', (body.authorization))
     })
 })
