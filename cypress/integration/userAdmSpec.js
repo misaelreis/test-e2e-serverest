@@ -8,6 +8,7 @@ import userPage from '../page/createUser.page'
 import login from '../page/login.page';
 
 describe('Testes - Cadastro de usuário Adm', ()=>{
+    //Não tem mensagem de sucesso
     const user = {
         name: faker.name.firstName(),
         email : faker.internet.email(),
@@ -70,5 +71,46 @@ describe('Testes - Cadastro de usuário Adm', ()=>{
         validaTexto(login.textAlertEmailAdmin, 'email não pode ficar em branco')
         validaTexto(login.textAlertPasswordAdmin, 'password não pode ficar em branco')
         validaTexto(login.textAlertnomeAdmin, 'nome não pode ficar em branco')
+    })
+})
+
+describe('Testes - Listar usuários Adm', ()=>{
+
+    beforeEach(()=>{
+        cy.createLoginAdm()
+        cy.visit('admin/listarusuarios')
+    })
+
+    it('valida url - listagem de usuários', ()=>{
+        validaUrl('https://front.serverest.dev/admin/listarusuarios')
+    })
+
+    it('valida página - listagem de usuários', ()=>{
+        validaTexto(createUser.textTituloPagina, 'Lista dos usuários')
+        validaTexto(createUser.colunaNome, 'Nome')
+        validaTexto(createUser.colunaEmail, 'Email')
+        validaTexto(createUser.colunaSenha, 'Senha')
+        validaTexto(createUser.colunaAdministrador, 'Administrador')
+        validaTexto(createUser.colunaAcoes, 'Ações')
+        validaElementoVisivel(createUser.btnEditarPrimeiroItem)
+        validaElementoVisivel(createUser.btnExcluirPrimeiroItem)
+    })
+})
+
+describe('Testes - Editar usuários', ()=>{
+    //Feature não desenvolvida ainda
+})
+
+describe('Testes - Listar usuários Adm', ()=>{
+
+    beforeEach(()=>{
+        cy.createLoginAdm()
+        cy.visit('admin/listarusuarios')
+    })
+
+    it('Teste excluir primeiro usuário', ()=>{
+        clicar(createUser.btnExcluirPrimeiroItem)
+        validaUrl('https://front.serverest.dev/admin/listarusuarios')
+        //não tem mensagem de exclusão de usuário
     })
 })
