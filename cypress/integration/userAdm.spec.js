@@ -1,10 +1,9 @@
 /// <reference types = "Cypress" />
 
-import createUser from '../page/createUser.page'
+import createUser from '../page/user.page'
 const faker = require('faker')
 
 import{ visit, validaTexto, validaUrl, clicar, digitar, validaElementoVisivel }from "../actions/principal.action";
-import userPage from '../page/createUser.page'
 import login from '../page/login.page';
 
 describe('Testes - Cadastro de usuário Adm', ()=>{
