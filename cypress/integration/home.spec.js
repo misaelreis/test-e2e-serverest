@@ -1,6 +1,6 @@
 /// <reference types = "Cypress" />
 
-import{ visit, validaTexto, validaUrl, clicar, digitar, validaElementoVisivel }from "../actions/principal.action";
+import{ validaTexto, validaUrl, clicar, digitar, validaElementoVisivel }from "../actions/principal.action";
 import homePage from '../page/home.page'
 
 describe('Testes Home - Adm', ()=>{
@@ -113,5 +113,19 @@ describe('Testes Home - User', ()=>{
     it('Logout', ()=>{
         clicar(homePage.btnlogout)
         validaUrl('https://front.serverest.dev/login')
+    })
+
+    it('Pesquisando produtos', ()=>{
+        cy.createProduct()
+        digitar(homePage.inputPesquisar, 'Teste Zael Uai')
+        clicar(homePage.btnPesquisar)
+        validaElementoVisivel(homePage.product)
+    })
+
+    it('Pesquisando produto inexistente', ()=>{
+        cy.createProduct()
+        digitar(homePage.inputPesquisar, 'kkkkkkkkkkkkkkk')
+        clicar(homePage.btnPesquisar)
+        validaTexto(homePage.textProdutoNaoEncontrado, 'Nenhum produto foi encontrado')
     })
 })

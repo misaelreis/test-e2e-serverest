@@ -4,7 +4,7 @@ import product from '../page/product.page'
 import loginPage from '../page/login.page'
 const faker = require('faker')
 
-import{ visit, validaTexto, validaUrl, clicar, digitar, validaElementoVisivel }from "../actions/principal.action";
+import{ validaTexto, validaUrl, clicar, digitar }from "../actions/principal.action";
 
 describe('Testes - Cadastro de produtos', ()=>{
     const prod = {

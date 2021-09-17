@@ -3,7 +3,7 @@
 import createUser from '../page/user.page'
 const faker = require('faker')
 
-import{ visit, validaTexto, validaUrl, clicar, digitar, validaElementoVisivel }from "../actions/principal.action";
+import{ validaTexto, validaUrl, clicar, validaElementoVisivel }from "../actions/principal.action";
 import login from '../page/login.page';
 
 describe('Testes - Cadastro de usuário Adm', ()=>{

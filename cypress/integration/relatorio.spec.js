@@ -1,10 +1,9 @@
 /// <reference types = "Cypress" />
 
 import product from '../page/product.page'
-import loginPage from '../page/login.page'
 const faker = require('faker')
 
-import{ visit, validaTexto, validaUrl, clicar, digitar, validaElementoVisivel }from "../actions/principal.action";
+import{ validaTexto, validaUrl }from "../actions/principal.action";
 
 describe('Testes - relatório', ()=>{
   
