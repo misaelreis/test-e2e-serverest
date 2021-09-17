@@ -1,5 +1,5 @@
-# __Test-e2e-serverest Cypress.io__
-## __Apresentação__
+# __Test-e2e-serverest Cypress.io__ ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Misaelreis/test-e2e-serverest/main)
+## __Apresentação__ 
 1. Teste e2e da aplicação [serverest](https://front.serverest.dev/)
 ## __Pré-requisitos__
 1. Instalar o [Node](https://nodejs.org/pt-br/)
