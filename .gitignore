@@ -100,7 +100,6 @@ public/
 #Cypress
 cypress/screenshots
 cypress/videos
-package-lock.json
 
 
 # End of https://www.gitignore.io/api/node
