@@ -1,7 +1,7 @@
 /// <reference types = "Cypress" />
 
 import{ visit, validaTexto, validaUrl, clicar, digitar, validaElementoVisivel }from "../actions/principal.action";
-import homePage from '../page/home.Page'
+import homePage from '../page/home.page'
 
 describe('Testes Home - Adm', ()=>{
 

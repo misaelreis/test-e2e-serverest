@@ -1,6 +1,7 @@
 /// <reference types="Cypress" />
 import login from '../page/login.page'
 import createUser from '../page/user.page'
+import 'cypress-file-upload'
 
 Cypress.Commands.add('login', (user, password) => {
     cy.createUserFix()
