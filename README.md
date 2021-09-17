@@ -10,12 +10,12 @@
 ```
 npm install
 ```
-2. Para abrir o Cypress Application usar o comando
+2. Para abrir o Cypress Application use o comando
 ```
 npm run cypress:open
 ````
 
-3. Para rodar o Cypress Headless usar o comando
+3. Para rodar o Cypress Headless use o comando
 ```
 npm run cypress:run
 ````
