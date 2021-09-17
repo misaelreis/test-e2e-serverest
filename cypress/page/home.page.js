@@ -20,9 +20,11 @@ const home = {
     'btnMenuListaCompra':'[data-testid=lista-de-compras]',
     'btnCarrinho':'[data-testid=carrinho]',
     'inputPesquisar':'[data-testid=pesquisar]',
+    'btnAdicionarProduto':'[data-testid=adicionarNaLista]',
+    'btnDetalhe':'.card-link',
     'btnPesquisar':'[data-testid=botaoPesquisar]',
     'produtoUm':':nth-child(1) > .row > :nth-child(1)',
-    'adicionarProdutoUm':':nth-child(1) > .card-body > div > [href="/minhaListaDeProdutos"] > [data-testid=adicionarNaLista]',
-    'textProdutoNaoEncontrado':'.espacamento > .col-12 > .row'
+    'textProdutoNaoEncontrado':'.espacamento > .col-12 > .row',
+    'product':'.card'
 } 
 export default home;
