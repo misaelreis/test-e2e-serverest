@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 import login from '../page/login.page'
-import createUser from '../page/createUser.page'
+import createUser from '../page/user.page'
 
 Cypress.Commands.add('login', (user, password) => {
     cy.createUserFix()
