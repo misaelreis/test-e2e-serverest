@@ -66,3 +66,30 @@ Cypress.Commands.add('createLoginUser', () => {
         window.localStorage.setItem('serverest/userToken', (body.authorization))
     })
 })
+
+
+Cypress.Commands.add('createProduct', () => {
+    cy.createUserFix()
+    cy.request({
+        method: 'POST',
+        Headers:{'accept':'/'},
+        url: 'https://serverest.dev/login',
+        body:{
+            "email": "misael@gmail.com.br",
+            "password": "teste"
+        }
+    }).then(({body}) => {
+        cy.request({
+            failOnStatusCode: false,
+            method: 'POST',
+            headers: { Authorization: body.authorization },
+            url: 'https://serverest.dev/produtos',
+            body:{
+                "nome": "Teste Zael Uai",
+                "preco": 470,
+                "descricao": "Mouse",
+                "quantidade": 381
+            }
+        })
+    })
+})
