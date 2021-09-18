@@ -1,6 +1,5 @@
 # __Test-e2e-serverest Cypress.io__ ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Misaelreis/test-e2e-serverest/main)
-## __Apresentação__ 
-1. Teste e2e da aplicação [serverest](https://front.serverest.dev/)
+## __Teste e2e da aplicação [serverest](https://front.serverest.dev/)__
 ## __Pré-requisitos__
 1. Instalar o [Node](https://nodejs.org/pt-br/)
 1. Ter o Chrome instalado
