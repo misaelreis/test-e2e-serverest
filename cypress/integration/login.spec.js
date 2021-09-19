@@ -1,63 +1,84 @@
 /// <reference types = "Cypress" />
 
-import{ visit, validaTexto, validaUrl, clicar, digitar }from "../actions/principal.action";
-import loginPage from '../page/login.page'
-
 describe('Testes de Login', ()=>{
-    const login = {
-        user: 'misael@gmail.com.br',
-        password: 'teste'
-    }
+
     beforeEach(()=>{
-        visit()
+        cy.visit('')
     })
     
     it('valida página de login', ()=>{
-        validaUrl('https://front.serverest.dev/login')
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/login'
+        )
     })
 
-    it('valida login sucesso', ()=>{
-        cy.login(login.user, login.password)
-        validaUrl('https://front.serverest.dev/admin/home')
+    it('valida login adm sucesso', ()=>{
+        cy.login(Cypress.env('admUser'), Cypress.env('password'))
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/admin/home'
+        )
+    })
+
+    it('valida login user sucesso', ()=>{
+        cy.login(Cypress.env('user'), Cypress.env('password'))
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/home'
+        )
     })
 
     it('valida email incorreto', ()=>{
-        cy.login('misael@qc.com.br', login.password)
-        validaTexto(loginPage.textAlert, 'Email e/ou senha inválidos')
+        cy.login('misael@qc.com.br', Cypress.env('password'))
+        cy.get('.alert')
+        .should('have.text', 'Email e/ou senha inválidos')
     })
 
     it('valida senha incorreta', ()=>{
-        cy.login(login.user, 'testing')
-        validaTexto(loginPage.textAlert, 'Email e/ou senha inválidos')
+        cy.login(Cypress.env('user'), 'testing')
+        cy.get('.alert')
+        .should('have.text', 'Email e/ou senha inválidos')
     })
 
     it('valida logout sucesso', ()=>{
-        cy.login(login.user, login.password)
-        validaUrl('https://front.serverest.dev/admin/home')
-        clicar(loginPage.btnSair)
-        validaUrl('https://front.serverest.dev/login')
+        cy.login(Cypress.env('user'), Cypress.env('password'))
+        cy.get('[data-testid=logout]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/login'
+        )
     })
 
     it('valida login sem senha', ()=>{
-        digitar(loginPage.imputEmail,login.user)
-        clicar(loginPage.btnEntrar)
-        validaTexto(loginPage.textAlert, 'password não pode ficar em branco')
+        cy.get('[data-testid=email]').type(Cypress.env('user'))
+        cy.get('[data-testid=entrar]').click()
+        cy.get('.alert')
+        .should('have.text', 'password não pode ficar em branco')
     })
 
     it('valida email invalido', ()=>{
-        cy.login('m@m', login.password)
-        validaTexto(loginPage.textAlert, 'email deve ser um email válido')
+        cy.login('m@m', Cypress.env('password'))
+        cy.get('.alert')
+        .should('have.text', 'email deve ser um email válido')
     })
 
     it('valida login sem email', ()=>{
-        digitar(loginPage.imputSenha, 'teste')
-        clicar(loginPage.btnEntrar)
-        validaTexto(loginPage.textAlert, 'email não pode ficar em branco')
+        cy.get('[data-testid=senha]').type(Cypress.env('password'))
+        cy.get('[data-testid=entrar]').click()
+        cy.get('.alert')
+        .should('have.text', 'email não pode ficar em branco')
     })
 
     it('valida login sem email e senha', ()=>{
-        clicar(loginPage.btnEntrar)
-        validaTexto(loginPage.textAlertEmail, 'email não pode ficar em branco')
-        validaTexto(loginPage.textAlertPassword, 'password não pode ficar em branco')
+        cy.get('[data-testid=entrar]').click()
+        cy.get(':nth-child(4) > .alert')
+        .should('have.text', 'email não pode ficar em branco')
+        cy.get(':nth-child(5) > .alert')
+        .should('have.text', 'password não pode ficar em branco')
     })
 })

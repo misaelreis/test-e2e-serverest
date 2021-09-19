@@ -1,9 +1,5 @@
 /// <reference types = "Cypress" />
 
-import{ validaTexto, validaUrl, clicar, digitar }from "../actions/principal.action";
-import listPage from '../page/list.page'
-import homePage from '../page/home.page'
-
 describe('Testes - Acessar lista de compra', ()=>{
 
     beforeEach(()=>{
@@ -12,14 +8,18 @@ describe('Testes - Acessar lista de compra', ()=>{
     })
 
     it('Valida lista de compra', ()=>{
-       validaTexto(listPage.textListaCompra, 'Lista de Compras')
-       validaTexto(listPage.textCarrinhoVazio, 'Seu carrinho está vazio')
-       validaUrl('https://front.serverest.dev/minhaListaDeProdutos')
+        cy.get('h1').should('have.text', 'Lista de Compras')
+        cy.get('[data-testid=shopping-cart-empty-message]').should('have.text', 
+        'Seu carrinho está vazio')
     })
 
     it('Voltar para a home', ()=>{
-        clicar(listPage.btnPaginaInicial)
-        validaUrl('https://front.serverest.dev/home')
+        cy.get('[data-testid=paginaInicial]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/home'
+        )
     })
 })
 
@@ -29,64 +29,73 @@ describe('Testes - Acessar lista de compra com produto', ()=>{
         cy.createProduct()
         cy.createLoginUser()
         cy.visit('home')
-        digitar(homePage.inputPesquisar, 'Teste Zael Uai')
-        clicar(homePage.btnPesquisar)
+        cy.get('[data-testid=pesquisar]').type('Teste Zael Uai')
+        cy.get('[data-testid=botaoPesquisar]').click()
     })
 
     it('Valida detalhes produto - voltar', ()=>{
-        clicar(homePage.btnDetalhe)
-        validaTexto(listPage.textListaCompra, 'Detalhes do produto')
-        validaTexto(listPage.textNomeProduto, 'Teste Zael Uai')
-        clicar(listPage.btnVoltar)
-        validaUrl('https://front.serverest.dev/home')
+        cy.get('.card-link').click()
+        cy.get('h1').should('have.text', 'Detalhes do produto')
+        cy.get('[data-testid=product-detail-name]').should('have.text', 'Teste Zael Uai')
+        cy.get('[data-testid=voltarHome]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/home'
+        )
     })
 
     it('Valida detalhes produto - adicionar lista', ()=>{
-        clicar(homePage.btnDetalhe)
-        validaTexto(listPage.textListaCompra, 'Detalhes do produto')
-        validaTexto(listPage.textNomeProduto, 'Teste Zael Uai')
-        clicar(listPage.btnAdicionarLista)
-        validaUrl('https://front.serverest.dev/minhaListaDeProdutos')
-        clicar(listPage.btnLimparLista)
-        validaTexto(listPage.textCarrinhoVazio, 'Seu carrinho está vazio')
+        cy.get('.card-link').click()
+        cy.get('h1').should('have.text', 'Detalhes do produto')
+        cy.get('[data-testid=product-detail-name]').should('have.text', 'Teste Zael Uai')
+        cy.get('[data-testid=adicionarNaLista]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/minhaListaDeProdutos'
+        )
+        cy.get('[data-testid=limparLista]').click()
+        cy.get('[data-testid=shopping-cart-empty-message]').should('have.text',
+         'Seu carrinho está vazio')
     })
 
     it('Valida detalhes produto - adicionar lista e carrinho', ()=>{
-        clicar(homePage.btnDetalhe)
-        validaTexto(listPage.textListaCompra, 'Detalhes do produto')
-        validaTexto(listPage.textNomeProduto, 'Teste Zael Uai')
-        clicar(listPage.btnAdicionarLista)
-        validaUrl('https://front.serverest.dev/minhaListaDeProdutos')
-        clicar(listPage.btnAdicionarCarrinho)
-        validaUrl('https://front.serverest.dev/carrinho')
-        validaTexto(listPage.textListaCompra, 'Em construção aguarde')
+        cy.get('.card-link').click()
+        cy.get('h1').should('have.text','Detalhes do produto')
+        cy.get('[data-testid=product-detail-name]').should('have.text','Teste Zael Uai')
+        cy.get('[data-testid=adicionarNaLista]').click()
+        cy.get('[data-testid="adicionar carrinho"]').click()
+        cy.get('h1').should('have.text', 'Em construção aguarde')
     })
 
     it('Valida detalhes produto - Adicionar produtos', ()=>{
-        clicar(homePage.btnDetalhe)
-        validaTexto(listPage.textListaCompra, 'Detalhes do produto')
-        validaTexto(listPage.textNomeProduto, 'Teste Zael Uai')
-        clicar(listPage.btnAdicionarLista)
-        clicar(listPage.btnAdicionarMais)
-        validaTexto(listPage.textQtdItem,2)
-        validaUrl('https://front.serverest.dev/minhaListaDeProdutos')
+        cy.get('.card-link').click()
+        cy.get('h1').should('have.text','Detalhes do produto')
+        cy.get('[data-testid=product-detail-name]').should('have.text','Teste Zael Uai')
+        cy.get('[data-testid=adicionarNaLista]').click()
+        cy.get('[data-testid=product-increase-quantity]').click()
+        cy.get('.row > :nth-child(3)').should('have.text',2)
     })
 
 
     it('Valida detalhes produto - Remover produtos', ()=>{
-        clicar(homePage.btnDetalhe)
-        validaTexto(listPage.textListaCompra, 'Detalhes do produto')
-        validaTexto(listPage.textNomeProduto, 'Teste Zael Uai')
-        clicar(listPage.btnAdicionarLista)
-        clicar(listPage.btnAdicionarMais)
-        validaTexto(listPage.textQtdItem,2)
-        clicar(listPage.btnRemover)
-        validaTexto(listPage.textQtdItem,1)
-        validaUrl('https://front.serverest.dev/minhaListaDeProdutos')
+        cy.get('.card-link').click()
+        cy.get('h1').should('have.text','Detalhes do produto')
+        cy.get('[data-testid=product-detail-name]').should('have.text','Teste Zael Uai')
+        cy.get('[data-testid=adicionarNaLista]').click()
+        cy.get('[data-testid=product-increase-quantity]').click()
+        cy.get('.row > :nth-child(3)').should('have.text',2)
+        cy.get('[data-testid=product-decrease-quantity]').click()
+        cy.get('.row > :nth-child(3)').should('have.text',1)
     })
 
     it('Valida detalhes produto - Adicionar Lista', ()=>{
-        clicar(listPage.btnAdicionarLista)
-        validaUrl('https://front.serverest.dev/minhaListaDeProdutos')
+        cy.get('[data-testid=adicionarNaLista]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/minhaListaDeProdutos'
+        )
     })
 })

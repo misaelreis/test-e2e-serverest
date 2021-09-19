@@ -1,10 +1,5 @@
 /// <reference types = "Cypress" />
 
-import product from '../page/product.page'
-const faker = require('faker')
-
-import{ validaTexto, validaUrl }from "../actions/principal.action";
-
 describe('Testes - relatório', ()=>{
   
     beforeEach(()=>{
@@ -13,7 +8,11 @@ describe('Testes - relatório', ()=>{
     })
 
     it('valida página de cadastro', ()=>{
-        validaUrl('https://front.serverest.dev/admin/relatorios')
-        validaTexto(product.textProduto, 'Em construção aguarde')
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/admin/relatorios'
+        )
+        cy.get('h1').should('have.text', 'Em construção aguarde')
     })
 })
