@@ -1,10 +1,6 @@
 /// <reference types = "Cypress" />
 
-import product from '../page/product.page'
-import loginPage from '../page/login.page'
 const faker = require('faker')
-
-import{ validaTexto, validaUrl, clicar, digitar }from "../actions/principal.action";
 
 describe('Testes - Cadastro de produtos', ()=>{
     const prod = {
@@ -20,67 +16,82 @@ describe('Testes - Cadastro de produtos', ()=>{
     })
 
     it('valida página de cadastro', ()=>{
-        validaUrl('https://front.serverest.dev/admin/cadastrarprodutos')
-        validaTexto(product.textProduto, 'Cadastro de Produtos')
+        cy.get('h1').should('have.text', 'Cadastro de Produtos')
     })
 
     it('Cadastrar produto com sucesso', ()=>{
-        cy.get(product.btnImagem).as('fileInput').attachFile('cy.png')
-        digitar(product.inputNome, prod.nome)
-        digitar(product.inputDescricao, prod.descricao)
-        digitar(product.inputPreco, prod.preco)
-        digitar(product.inputQuantidade, prod.quantidade)
-        clicar(product.btnCadastrar)
-        validaUrl('https://front.serverest.dev/admin/listarprodutos')
+        cy.get('[data-testid=imagem]').as('fileInput').attachFile('cy.png')
+        cy.get('[data-testid=nome]').type(prod.nome)
+        cy.get('[data-testid=descricao]').type(prod.descricao)
+        cy.get('[data-testid=preco]').type(prod.preco)
+        cy.get('[data-testid=quantidade]').type(prod.quantidade)
+        cy.get('[data-testid=cadastarProdutos]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/admin/listarprodutos'
+        )
     })
 
     it('Cadastrar produto sem nome', ()=>{
-        digitar(product.inputDescricao, prod.descricao)
-        digitar(product.inputPreco, prod.preco)
-        digitar(product.inputQuantidade, prod.quantidade)
-        clicar(product.btnCadastrar)
-        validaTexto(loginPage.textAlert, 'nome não pode ficar em branco')
+        cy.get('[data-testid=descricao]').type(prod.descricao)
+        cy.get('[data-testid=preco]').type(prod.preco)
+        cy.get('[data-testid=quantidade]').type(prod.quantidade)
+        cy.get('[data-testid=cadastarProdutos]').click()
+        cy.get('.alert')
+        .should('have.text', 'nome não pode ficar em branco')
     })
 
     it('Cadastrar produto sem descrição', ()=>{
-        digitar(product.inputNome, prod.nome)
-        digitar(product.inputPreco, prod.preco)
-        digitar(product.inputQuantidade, prod.quantidade)
-        clicar(product.btnCadastrar)
-        validaTexto(loginPage.textAlert, 'descricao não pode ficar em branco')
+        cy.get('[data-testid=nome]').type(prod.nome)
+        cy.get('[data-testid=preco]').type(prod.preco)
+        cy.get('[data-testid=quantidade]').type(prod.quantidade)
+        cy.get('[data-testid=cadastarProdutos]').click()
+        cy.get('.alert')
+        .should('have.text', 'descricao não pode ficar em branco')
     })
 
     it('Cadastrar produto sem preço', ()=>{
-        digitar(product.inputDescricao, prod.descricao)
-        digitar(product.inputNome, prod.nome)
-        digitar(product.inputQuantidade, prod.quantidade)
-        clicar(product.btnCadastrar)
-        validaTexto(loginPage.textAlert, 'preco deve ser um número')
+        cy.get('[data-testid=imagem]').as('fileInput').attachFile('cy.png')
+        cy.get('[data-testid=nome]').type(prod.nome)
+        cy.get('[data-testid=descricao]').type(prod.descricao)
+        cy.get('[data-testid=quantidade]').type(prod.quantidade)
+        cy.get('[data-testid=cadastarProdutos]').click()
+        cy.get('.alert')
+        .should('have.text', 'preco deve ser um número')
     })
 
     it('Cadastrar produto tipo de preço incorreto', ()=>{
-        digitar(product.inputPreco, 'a')
-        digitar(product.inputDescricao, prod.descricao)
-        digitar(product.inputNome, prod.nome)
-        digitar(product.inputQuantidade, prod.quantidade)
-        clicar(product.btnCadastrar)
-        validaTexto(loginPage.textAlert, 'preco deve ser um número')
+        cy.get('[data-testid=imagem]').as('fileInput').attachFile('cy.png')
+        cy.get('[data-testid=nome]').type(prod.nome)
+        cy.get('[data-testid=descricao]').type(prod.descricao)
+        cy.get('[data-testid=preco]').type('a')
+        cy.get('[data-testid=quantidade]').type(prod.quantidade)
+        cy.get('[data-testid=cadastarProdutos]').click()
+        cy.get('.alert')
+        .should('have.text', 'preco deve ser um número')
     })
 
     it('Cadastrar produto sem quantidade', ()=>{
-        digitar(product.inputPreco, prod.preco)
-        digitar(product.inputDescricao, prod.descricao)
-        digitar(product.inputNome, prod.nome)
-        clicar(product.btnCadastrar)
-        validaTexto(loginPage.textAlert, 'quantidade deve ser um número')
+        cy.get('[data-testid=imagem]').as('fileInput').attachFile('cy.png')
+        cy.get('[data-testid=nome]').type(prod.nome)
+        cy.get('[data-testid=descricao]').type(prod.descricao)
+        cy.get('[data-testid=preco]').type(prod.preco)
+        cy.get('[data-testid=cadastarProdutos]').click()
+        cy.get('.alert')
+        .should('have.text', 'quantidade deve ser um número')
     })
 
     it('Cadastrar produtos - campos obrigatórios', ()=>{
-        clicar(product.btnCadastrar)
-        validaTexto(loginPage.textAlertEmail, 'quantidade deve ser um número')
-        validaTexto(loginPage.textAlertnomeAdmin, 'nome não pode ficar em branco')
-        validaTexto(loginPage.textAlertPasswordAdmin, 'descricao não pode ficar em branco')
-        validaTexto(loginPage.textAlertEmailAdmin, 'preco deve ser um número')
+        cy.get('[data-testid=cadastarProdutos]').click()
+        cy.get(':nth-child(4) > .alert')
+        .should('have.text', 'quantidade deve ser um número')
+        cy.get(':nth-child(2) > .alert')
+        .should('have.text', 'preco deve ser um número')
+        cy.get(':nth-child(1) > .alert')
+        .should('have.text', 'nome não pode ficar em branco')
+        cy.get(':nth-child(3) > .alert')
+        .should('have.text', 'descricao não pode ficar em branco')
     })
 })
 
@@ -92,17 +103,16 @@ describe('Testes - Excluir produtos', ()=>{
     })
 
     it('valida página de listagem', ()=>{
-        validaUrl('https://front.serverest.dev/admin/listarprodutos')
-        validaTexto(product.textProduto, 'Lista dos Produtos')
+        cy.get('h1').should('have.text', 'Lista dos Produtos')
     })
 
     it('excluir produto', ()=>{
-        clicar(product.btnExcluirPrimeiroProduto)
+        cy.get(':nth-child(1) > :nth-child(6) > .row > .btn-danger').click()
     })
 
     describe('Testes - Editar produtos', ()=>{
 
-        //funcionalidade não desenvolvida
+        //funcionalidade não desenvolvida ainda
         beforeEach(()=>{
             cy.createLoginAdm()
             cy.visit('admin/listarprodutos')

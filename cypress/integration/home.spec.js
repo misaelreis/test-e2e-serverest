@@ -1,8 +1,5 @@
 /// <reference types = "Cypress" />
 
-import{ validaTexto, validaUrl, clicar, digitar, validaElementoVisivel }from "../actions/principal.action";
-import homePage from '../page/home.page'
-
 describe('Testes Home - Adm', ()=>{
 
     beforeEach(()=>{
@@ -11,74 +8,120 @@ describe('Testes Home - Adm', ()=>{
     })
 
     it('valida home - Adm', ()=>{
-        validaUrl('https://front.serverest.dev/admin/home')
-        validaElementoVisivel(homePage.logo)
+        cy.get('.imagem').should('be.visible')
     })
 
     it('Cadastrar usuário - btn', ()=>{
-        clicar(homePage.btnCadastrarUsuario)
-        validaUrl('https://front.serverest.dev/admin/cadastrarusuarios')
+        cy.get('[data-testid=cadastrarUsuarios]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/admin/cadastrarusuarios'
+        )
     })
 
     it('Cadastrar usuário - btn menu', ()=>{
-        clicar(homePage.btnMenuCadastrarUsuario)
-        validaUrl('https://front.serverest.dev/admin/cadastrarusuarios')
+        cy.get('[data-testid=cadastrar-usuarios]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/admin/cadastrarusuarios'
+        )
     })
 
     it('Listar usuário - btn', ()=>{
-        clicar(homePage.btnListarUsuario)
-        validaUrl('https://front.serverest.dev/admin/listarusuarios')
+        cy.get('[data-testid=listarUsuarios]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/admin/listarusuarios'
+        )
     })
 
     it('Listar usuário - btn menu', ()=>{
-        clicar(homePage.btnMenuListarUsuario)
-        validaUrl('https://front.serverest.dev/admin/listarusuarios')
+        cy.get('[data-testid=listar-usuarios]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/admin/listarusuarios'
+        )
     })
 
     it('Cadastrar produto - btn', ()=>{
-        clicar(homePage.btnCadastrarProduto)
-        validaUrl('https://front.serverest.dev/admin/cadastrarprodutos')
+        cy.get('[data-testid=cadastrarProdutos]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/admin/cadastrarprodutos'
+        )
     })
 
     it('Cadastrar produto - btn menu', ()=>{
-        clicar(homePage.btnMenuCadastrarProduto)
-        validaUrl('https://front.serverest.dev/admin/cadastrarprodutos')
+        cy.get('[data-testid=cadastrar-produtos]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/admin/cadastrarprodutos'
+        )
     })
 
 
     it('Listar produto - btn', ()=>{
-        clicar(homePage.btnListarProduto)
-        validaUrl('https://front.serverest.dev/admin/listarprodutos')
+        cy.get('[data-testid=listarProdutos]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/admin/listarprodutos'
+        )
     })
 
     it('Listar produto - btn menu', ()=>{
-        clicar(homePage.btnMenuListarProduto)
-        validaUrl('https://front.serverest.dev/admin/listarprodutos')
-    })
+        cy.get('[data-testid=listar-produtos]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/admin/listarprodutos'
+        )    })
 
     it('Listar relatório - btn', ()=>{
-        clicar(homePage.btnRelatorio)
-        validaUrl('https://front.serverest.dev/admin/relatorios')
+        cy.get('[data-testid=relatorios]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/admin/relatorios'
+        )
     })
 
     it('Listar produto - btn menu', ()=>{
-        clicar(homePage.btnMenuRelatorio)
-        validaUrl('https://front.serverest.dev/admin/relatorios')
+        cy.get('[data-testid=link-relatorios]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/admin/relatorios'
+        )
     })
 
     it('Valida texto', ()=>{
-        validaTexto(homePage.textAdm, 'Este é seu sistema para administrar seu ecommerce.')
+        cy.get('.lead').should('have.text', 'Este é seu sistema para administrar seu ecommerce.')
     })
 
     it('Home', ()=>{
-        clicar(homePage.btnMenuRelatorio)
-        clicar(homePage.btnHome)
-        validaUrl('https://front.serverest.dev/admin/home')
+        cy.get('[data-testid=link-relatorios]').click()
+        cy.get('[data-testid=home]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/admin/home'
+        )
     })
 
     it('Logout', ()=>{
-        clicar(homePage.btnlogout)
-        validaUrl('https://front.serverest.dev/login')
+        cy.get('[data-testid=logout]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/login'
+        )
     })
 })
 
@@ -90,42 +133,62 @@ describe('Testes Home - User', ()=>{
     })
 
     it('valida home user', ()=>{
-        validaUrl('https://front.serverest.dev/home')
-        validaElementoVisivel(homePage.logoUser)
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/home'
+        )
+        cy.get('#navbarTogglerDemo01 > .imagem').should('be.visible')
     })
 
     it('Listar carrinho', ()=>{
-        clicar(homePage.btnCarrinho)
-        validaUrl('https://front.serverest.dev/carrinho')
+        cy.get('[data-testid=carrinho]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/carrinho'
+        )
     })
 
     it('Home', ()=>{
-        validaElementoVisivel(homePage.btnCarrinho)
-        clicar(homePage.btnHome)
-        validaUrl('https://front.serverest.dev/home')
+        cy.get('[data-testid=carrinho]').should('be.visible')
+        cy.get('[data-testid=home]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/home'
+        )
     })
 
     it('Lista de compra', ()=>{
-        clicar(homePage.btnMenuListaCompra)
-        validaUrl('https://front.serverest.dev/minhaListaDeProdutos')
+        cy.get('[data-testid=lista-de-compras]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/minhaListaDeProdutos'
+        )
     })
 
     it('Logout', ()=>{
-        clicar(homePage.btnlogout)
-        validaUrl('https://front.serverest.dev/login')
+        cy.get('[data-testid=logout]').click()
+        cy.url()
+        .should(
+            'be.equal',
+            'https://front.serverest.dev/login'
+        )
     })
 
     it('Pesquisando produtos', ()=>{
         cy.createProduct()
-        digitar(homePage.inputPesquisar, 'Teste Zael Uai')
-        clicar(homePage.btnPesquisar)
-        validaElementoVisivel(homePage.product)
+        cy.get('[data-testid=pesquisar]').type('Teste Zael Uai')
+        cy.get('[data-testid=botaoPesquisar]').click()
+        cy.get('.card').should('be.visible')
     })
 
     it('Pesquisando produto inexistente', ()=>{
-        cy.createProduct()
-        digitar(homePage.inputPesquisar, 'kkkkkkkkkkkkkkk')
-        clicar(homePage.btnPesquisar)
-        validaTexto(homePage.textProdutoNaoEncontrado, 'Nenhum produto foi encontrado')
+        cy.get('[data-testid=pesquisar]').type('ok obrigado')
+        cy.get('[data-testid=botaoPesquisar]').click()
+        cy.get('.espacamento > .col-12 > .row').should(
+            'have.text', 'Nenhum produto foi encontrado')
     })
 })
