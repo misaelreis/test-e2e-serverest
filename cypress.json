@@ -1,3 +1,4 @@
-{   "baseUrl": "https://front.serverest.dev/",
+{   
+    "baseUrl": "https://front.serverest.dev/",
     "watchForFileChanges" : false
 }
