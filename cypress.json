@@ -1,3 +1,7 @@
 {   "baseUrl": "https://front.serverest.dev/",
-    "watchForFileChanges" : false
+    "watchForFileChanges" : false,
+ 
+    "admUser": "misael@gmail.com.br",
+    "user": "misael@gmail.com",
+    "password": "teste"
 }
