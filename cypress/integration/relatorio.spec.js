@@ -1,4 +1,5 @@
 /// <reference types = "Cypress" />
+const baseUrl = Cypress.config('baseUrl')
 
 describe('Testes - relatório', ()=>{
   
@@ -8,11 +9,7 @@ describe('Testes - relatório', ()=>{
     })
 
     it('valida página de cadastro', ()=>{
-        cy.url()
-        .should(
-            'be.equal',
-            'https://front.serverest.dev/admin/relatorios'
-        )
-        cy.get('h1').should('have.text', 'Em construção aguarde')
+        cy.url().should('be.equal',`${baseUrl}admin/relatorios`)
+        cy.contains('h1', 'Em construção aguarde').should('be.visible')
     })
 })

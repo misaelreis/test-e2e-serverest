@@ -1,6 +1,14 @@
 /// <reference types = "Cypress" />
 
 const faker = require('faker')
+const baseUrl = Cypress.config('baseUrl')
+const imageSelector = '[data-testid=imagem]'
+const nameSelector = '[data-testid=nome]'
+const descriptionSelector = '[data-testid=descricao]'
+const priceSelector = '[data-testid=preco]'
+const alertSelector = '.alert'
+const quantitySelector = '[data-testid=quantidade]'
+const btnCreateSelector = '[data-testid=cadastarProdutos]'
 
 describe('Testes - Cadastro de produtos', ()=>{
     const prod = {
@@ -16,82 +24,69 @@ describe('Testes - Cadastro de produtos', ()=>{
     })
 
     it('valida página de cadastro', ()=>{
-        cy.get('h1').should('have.text', 'Cadastro de Produtos')
+        cy.contains('h1', 'Cadastro de Produtos').should('be.visible')
     })
 
     it('Cadastrar produto com sucesso', ()=>{
-        cy.get('[data-testid=imagem]').as('fileInput').attachFile('cy.png')
-        cy.get('[data-testid=nome]').type(prod.nome)
-        cy.get('[data-testid=descricao]').type(prod.descricao)
-        cy.get('[data-testid=preco]').type(prod.preco)
-        cy.get('[data-testid=quantidade]').type(prod.quantidade)
-        cy.get('[data-testid=cadastarProdutos]').click()
-        cy.url()
-        .should(
-            'be.equal',
-            'https://front.serverest.dev/admin/listarprodutos'
-        )
+        cy.get(imageSelector).attachFile('cy.png')
+        cy.get(nameSelector).type(prod.nome)
+        cy.get(descriptionSelector).type(prod.descricao)
+        cy.get(priceSelector).type(prod.preco)
+        cy.get(quantitySelector).type(prod.quantidade)
+        cy.get(btnCreateSelector).click()
+        cy.url().should('be.equal',`${baseUrl}admin/listarprodutos`)
     })
 
     it('Cadastrar produto sem nome', ()=>{
-        cy.get('[data-testid=descricao]').type(prod.descricao)
-        cy.get('[data-testid=preco]').type(prod.preco)
-        cy.get('[data-testid=quantidade]').type(prod.quantidade)
-        cy.get('[data-testid=cadastarProdutos]').click()
-        cy.get('.alert')
-        .should('have.text', 'nome não pode ficar em branco')
+        cy.get(descriptionSelector).type(prod.descricao)
+        cy.get(priceSelector).type(prod.preco)
+        cy.get(quantitySelector).type(prod.quantidade)
+        cy.get(btnCreateSelector).click()
+        cy.contains(alertSelector,'nome não pode ficar em branco').should('be.visible')
     })
 
     it('Cadastrar produto sem descrição', ()=>{
-        cy.get('[data-testid=nome]').type(prod.nome)
-        cy.get('[data-testid=preco]').type(prod.preco)
-        cy.get('[data-testid=quantidade]').type(prod.quantidade)
-        cy.get('[data-testid=cadastarProdutos]').click()
-        cy.get('.alert')
-        .should('have.text', 'descricao não pode ficar em branco')
+        cy.get(nameSelector).type(prod.nome)
+        cy.get(priceSelector).type(prod.preco)
+        cy.get(quantitySelector).type(prod.quantidade)
+        cy.get(btnCreateSelector).click()
+        cy.contains(alertSelector,'descricao não pode ficar em branco').should('be.visible')
     })
 
     it('Cadastrar produto sem preço', ()=>{
-        cy.get('[data-testid=imagem]').as('fileInput').attachFile('cy.png')
-        cy.get('[data-testid=nome]').type(prod.nome)
-        cy.get('[data-testid=descricao]').type(prod.descricao)
-        cy.get('[data-testid=quantidade]').type(prod.quantidade)
-        cy.get('[data-testid=cadastarProdutos]').click()
-        cy.get('.alert')
-        .should('have.text', 'preco deve ser um número')
+        cy.get(imageSelector).attachFile('cy.png')
+        cy.get(nameSelector).type(prod.nome)
+        cy.get(descriptionSelector).type(prod.descricao)
+        cy.get(quantitySelector).type(prod.quantidade)
+        cy.get(btnCreateSelector).click()
+        cy.contains(alertSelector,'preco deve ser um número').should('be.visible')
     })
 
     it('Cadastrar produto tipo de preço incorreto', ()=>{
-        cy.get('[data-testid=imagem]').as('fileInput').attachFile('cy.png')
-        cy.get('[data-testid=nome]').type(prod.nome)
-        cy.get('[data-testid=descricao]').type(prod.descricao)
-        cy.get('[data-testid=preco]').type('a')
-        cy.get('[data-testid=quantidade]').type(prod.quantidade)
-        cy.get('[data-testid=cadastarProdutos]').click()
-        cy.get('.alert')
-        .should('have.text', 'preco deve ser um número')
+        cy.get(imageSelector).attachFile('cy.png')
+        cy.get(nameSelector).type(prod.nome)
+        cy.get(descriptionSelector).type(prod.descricao)
+        cy.get(priceSelector).type('a')
+        cy.get(quantitySelector).type(prod.quantidade)
+        cy.get(btnCreateSelector).click()
+        cy.contains(alertSelector,'preco deve ser um número').should('be.visible')
     })
 
     it('Cadastrar produto sem quantidade', ()=>{
-        cy.get('[data-testid=imagem]').as('fileInput').attachFile('cy.png')
-        cy.get('[data-testid=nome]').type(prod.nome)
-        cy.get('[data-testid=descricao]').type(prod.descricao)
-        cy.get('[data-testid=preco]').type(prod.preco)
-        cy.get('[data-testid=cadastarProdutos]').click()
-        cy.get('.alert')
-        .should('have.text', 'quantidade deve ser um número')
+        cy.get(imageSelector).attachFile('cy.png')
+        cy.get(nameSelector).type(prod.nome)
+        cy.get(descriptionSelector).type(prod.descricao)
+        cy.get(priceSelector).type(prod.preco)
+        cy.get(btnCreateSelector).click()
+        cy.contains(alertSelector,'quantidade deve ser um número').should('be.visible')
     })
 
     it('Cadastrar produtos - campos obrigatórios', ()=>{
-        cy.get('[data-testid=cadastarProdutos]').click()
-        cy.get(':nth-child(4) > .alert')
-        .should('have.text', 'quantidade deve ser um número')
-        cy.get(':nth-child(2) > .alert')
-        .should('have.text', 'preco deve ser um número')
-        cy.get(':nth-child(1) > .alert')
-        .should('have.text', 'nome não pode ficar em branco')
-        cy.get(':nth-child(3) > .alert')
-        .should('have.text', 'descricao não pode ficar em branco')
+        cy.get(btnCreateSelector).click()
+        cy.contains(alertSelector,'preco deve ser um número').should('be.visible')
+        cy.contains(alertSelector,'quantidade deve ser um número').should('be.visible')
+        cy.contains(alertSelector,'nome não pode ficar em branco').should('be.visible')
+        cy.contains(alertSelector,'descricao não pode ficar em branco').should('be.visible')
     })
 })
 
@@ -103,7 +98,7 @@ describe('Testes - Excluir produtos', ()=>{
     })
 
     it('valida página de listagem', ()=>{
-        cy.get('h1').should('have.text', 'Lista dos Produtos')
+        cy.contains('h1', 'Lista dos Produtos').should('be.visible')
     })
 
     it('excluir produto', ()=>{

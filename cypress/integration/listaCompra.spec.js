@@ -1,4 +1,6 @@
 /// <reference types = "Cypress" />
+const baseUrl = Cypress.config('baseUrl')
+const btnCarSelecto = '.card-link'
 
 describe('Testes - Acessar lista de compra', ()=>{
 
@@ -8,18 +10,14 @@ describe('Testes - Acessar lista de compra', ()=>{
     })
 
     it('Valida lista de compra', ()=>{
-        cy.get('h1').should('have.text', 'Lista de Compras')
+        cy.contains('h1', 'Lista de Compras').should('be.visible')
         cy.get('[data-testid=shopping-cart-empty-message]').should('have.text', 
         'Seu carrinho está vazio')
     })
 
     it('Voltar para a home', ()=>{
         cy.get('[data-testid=paginaInicial]').click()
-        cy.url()
-        .should(
-            'be.equal',
-            'https://front.serverest.dev/home'
-        )
+        cy.url().should('be.equal',`${baseUrl}home`)
     })
 })
 
@@ -34,44 +32,35 @@ describe('Testes - Acessar lista de compra com produto', ()=>{
     })
 
     it('Valida detalhes produto - voltar', ()=>{
-        cy.get('.card-link').click()
-        cy.get('h1').should('have.text', 'Detalhes do produto')
+        cy.get(btnCarSelecto).click()
+        cy.contains('h1', 'Detalhes do produto').should('be.visible')
         cy.get('[data-testid=product-detail-name]').should('have.text', 'Teste Zael Uai')
         cy.get('[data-testid=voltarHome]').click()
-        cy.url()
-        .should(
-            'be.equal',
-            'https://front.serverest.dev/home'
-        )
+        cy.url().should('be.equal',`${baseUrl}home`)
     })
 
     it('Valida detalhes produto - adicionar lista', ()=>{
-        cy.get('.card-link').click()
-        cy.get('h1').should('have.text', 'Detalhes do produto')
+        cy.get(btnCarSelecto).click()
+        cy.contains('h1', 'Detalhes do produto').should('be.visible')
         cy.get('[data-testid=product-detail-name]').should('have.text', 'Teste Zael Uai')
         cy.get('[data-testid=adicionarNaLista]').click()
-        cy.url()
-        .should(
-            'be.equal',
-            'https://front.serverest.dev/minhaListaDeProdutos'
-        )
+        cy.url().should('be.equal',`${baseUrl}minhaListaDeProdutos`)
         cy.get('[data-testid=limparLista]').click()
-        cy.get('[data-testid=shopping-cart-empty-message]').should('have.text',
-         'Seu carrinho está vazio')
+        cy.contains('[data-testid=shopping-cart-empty-message]','Seu carrinho está vazio').should('be.visible')
     })
 
     it('Valida detalhes produto - adicionar lista e carrinho', ()=>{
-        cy.get('.card-link').click()
-        cy.get('h1').should('have.text','Detalhes do produto')
+        cy.get(btnCarSelecto).click()
+        cy.contains('h1', 'Detalhes do produto').should('be.visible')
         cy.get('[data-testid=product-detail-name]').should('have.text','Teste Zael Uai')
         cy.get('[data-testid=adicionarNaLista]').click()
         cy.get('[data-testid="adicionar carrinho"]').click()
-        cy.get('h1').should('have.text', 'Em construção aguarde')
+        cy.contains('h1', 'Em construção aguarde').should('be.visible')
     })
 
     it('Valida detalhes produto - Adicionar produtos', ()=>{
-        cy.get('.card-link').click()
-        cy.get('h1').should('have.text','Detalhes do produto')
+        cy.get(btnCarSelecto).click()
+        cy.contains('h1', 'Detalhes do produto').should('be.visible')
         cy.get('[data-testid=product-detail-name]').should('have.text','Teste Zael Uai')
         cy.get('[data-testid=adicionarNaLista]').click()
         cy.get('[data-testid=product-increase-quantity]').click()
@@ -80,8 +69,8 @@ describe('Testes - Acessar lista de compra com produto', ()=>{
 
 
     it('Valida detalhes produto - Remover produtos', ()=>{
-        cy.get('.card-link').click()
-        cy.get('h1').should('have.text','Detalhes do produto')
+        cy.get(btnCarSelecto).click()
+        cy.contains('h1', 'Detalhes do produto').should('be.visible')
         cy.get('[data-testid=product-detail-name]').should('have.text','Teste Zael Uai')
         cy.get('[data-testid=adicionarNaLista]').click()
         cy.get('[data-testid=product-increase-quantity]').click()
@@ -92,10 +81,6 @@ describe('Testes - Acessar lista de compra com produto', ()=>{
 
     it('Valida detalhes produto - Adicionar Lista', ()=>{
         cy.get('[data-testid=adicionarNaLista]').click()
-        cy.url()
-        .should(
-            'be.equal',
-            'https://front.serverest.dev/minhaListaDeProdutos'
-        )
+        cy.url().should('be.equal',`${baseUrl}minhaListaDeProdutos`)
     })
 })
