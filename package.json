@@ -14,7 +14,7 @@
     "faker": "5.5.3"
   },
   "devDependencies": {
-    "cypress": "^8.4.1",
+    "cypress": "^8.5.0",
     "cypress-file-upload": "^5.0.8",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
