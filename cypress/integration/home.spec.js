@@ -83,7 +83,7 @@ describe('Testes Home - User', () => {
     cy.visit('home');
   });
 
-  it('valida home user', () => {
+  it('Valida home user', () => {
     cy.url().should('be.equal', `${baseUrl}home`);
     cy.get('#navbarTogglerDemo01 > .imagem').should('be.visible');
   });
