@@ -20,14 +20,14 @@ describe('Testes - Cadastro de usuário', () => {
     cy.visit('cadastrarusuarios');
   });
 
-  it('valida cadastro usuário adm sucesso', () => {
+  it('valida cadastro usuário adm sucesso', { tags: 'smoke' }, () => {
     user.email = faker.internet.email();
     cy.createUserAdm(user.name, user.email, user.password);
     cy.contains(alertSelector, 'Cadastro realizado com sucesso').should('be.visible');
     cy.url().should('be.equal', `${baseUrl}admin/home`);
   });
 
-  it('valida cadastro usuário sucesso', () => {
+  it('valida cadastro usuário sucesso', { tags: 'smoke' }, () => {
     user.email = faker.internet.email();
     cy.createUser(user.name, user.email, user.password);
     cy.contains(alertSelector, 'Cadastro realizado com sucesso').should('be.visible');

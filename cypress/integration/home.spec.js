@@ -7,7 +7,7 @@ describe('Testes Home - Adm', () => {
     cy.visit('admin/home');
   });
 
-  it('valida home - Adm', () => {
+  it('valida home - Adm', { tags: 'smoke' }, () => {
     cy.get('.imagem').should('be.visible');
   });
 
@@ -83,7 +83,7 @@ describe('Testes Home - User', () => {
     cy.visit('home');
   });
 
-  it('valida home user', () => {
+  it('valida home user', { tags: 'smoke' }, () => {
     cy.url().should('be.equal', `${baseUrl}home`);
     cy.get('#navbarTogglerDemo01 > .imagem').should('be.visible');
   });
