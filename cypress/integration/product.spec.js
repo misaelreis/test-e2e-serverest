@@ -28,7 +28,7 @@ describe('Testes - Cadastro de produtos', () => {
     cy.contains('h1', 'Cadastro de Produtos').should('be.visible');
   });
 
-  it('Cadastrar produto com sucesso', () => {
+  it('Cadastrar produto com sucesso', { tags: 'smoke' }, () => {
     cy.get(imageSelector).attachFile('cy.png');
     cy.get(nameSelector).type(prod.nome);
     cy.get(descriptionSelector).type(prod.descricao);

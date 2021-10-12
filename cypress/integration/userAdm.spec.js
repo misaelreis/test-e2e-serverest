@@ -22,13 +22,13 @@ describe('Testes - Cadastro de usuário Adm', () => {
     cy.visit('admin/cadastrarusuarios');
   });
 
-  it('valida cadastro usuário adm sucesso', () => {
+  it('valida cadastro usuário adm sucesso', { tags: 'smoke' }, () => {
     user.email = faker.internet.email();
     cy.createUserAdminAdm(user.name, user.email, user.password);
     cy.url().should('be.equal', `${baseUrl}admin/listarusuarios`);
   });
 
-  it('valida cadastro usuário sucesso', () => {
+  it('valida cadastro usuário sucesso', { tags: 'smoke' }, () => {
     user.email = faker.internet.email();
     cy.createAdminUser(user.name, user.email, user.password);
     cy.url().should('be.equal', `${baseUrl}admin/listarusuarios`);

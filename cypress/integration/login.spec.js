@@ -14,12 +14,12 @@ describe('Testes de Login', () => {
     cy.url().should('be.equal', `${baseUrl}login`);
   });
 
-  it('valida login adm sucesso', () => {
+  it('valida login adm sucesso', { tags: 'smoke' }, () => {
     cy.login(Cypress.env('admUser'), Cypress.env('password'));
     cy.url().should('be.equal', `${baseUrl}admin/home`);
   });
 
-  it('valida login user sucesso', () => {
+  it('valida login user sucesso', { tags: 'smoke' }, () => {
     cy.login(Cypress.env('user'), Cypress.env('password'));
     cy.url().should('be.equal', `${baseUrl}home`);
   });
@@ -34,7 +34,7 @@ describe('Testes de Login', () => {
     cy.contains(alertSelector, 'Email e/ou senha inválidos').should('be.visible');
   });
 
-  it('valida logout sucesso', () => {
+  it('valida logout sucesso', { tags: 'smoke' }, () => {
     cy.login(Cypress.env('user'), Cypress.env('password'));
     cy.get('[data-testid=logout]').click();
     cy.url().should('be.equal', `${baseUrl}login`);

@@ -29,7 +29,7 @@ describe('Testes - Acessar lista de compra com produto', () => {
     cy.get('[data-testid=botaoPesquisar]').click();
   });
 
-  it('Valida detalhes produto - voltar', () => {
+  it('Valida detalhes produto - voltar', { tags: 'smoke' }, () => {
     cy.get(btnCarSelecto).click();
     cy.contains('h1', 'Detalhes do produto').should('be.visible');
     cy.get('[data-testid=product-detail-name]').should('have.text', 'Teste Zael Uai');
@@ -37,7 +37,7 @@ describe('Testes - Acessar lista de compra com produto', () => {
     cy.url().should('be.equal', `${baseUrl}home`);
   });
 
-  it('Valida detalhes produto - adicionar lista', () => {
+  it('Valida detalhes produto - adicionar lista', { tags: 'smoke' }, () => {
     cy.get(btnCarSelecto).click();
     cy.contains('h1', 'Detalhes do produto').should('be.visible');
     cy.get('[data-testid=product-detail-name]').should('have.text', 'Teste Zael Uai');
@@ -65,7 +65,7 @@ describe('Testes - Acessar lista de compra com produto', () => {
     cy.get('.row > :nth-child(3)').should('have.text', 2);
   });
 
-  it('Valida detalhes produto - Remover produtos', () => {
+  it('Valida detalhes produto - Remover produtos', { tags: 'smoke' }, () => {
     cy.get(btnCarSelecto).click();
     cy.contains('h1', 'Detalhes do produto').should('be.visible');
     cy.get('[data-testid=product-detail-name]').should('have.text', 'Teste Zael Uai');
