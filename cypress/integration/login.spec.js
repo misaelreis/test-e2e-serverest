@@ -43,23 +43,23 @@ describe('Testes de Login', () => {
   it('valida login sem senha', () => {
     cy.get(emailSelector).type(Cypress.env('user'));
     cy.get(btnLoginSelector).click();
-    cy.contains(alertSelector, 'password não pode ficar em branco').should('be.visible');
+    cy.contains(alertSelector, 'Password é obrigatório').should('be.visible');
   });
 
   it('valida email invalido', () => {
     cy.login('m@m', Cypress.env('password'));
-    cy.contains(alertSelector, 'email deve ser um email válido').should('be.visible');
+    cy.contains(alertSelector, 'Email deve ser um email válido').should('be.visible');
   });
 
   it('valida login sem email', () => {
     cy.get(passwordSelector).type(Cypress.env('password'));
     cy.get(btnLoginSelector).click();
-    cy.contains(alertSelector, 'email não pode ficar em branco').should('be.visible');
+    cy.contains(alertSelector, 'Email é obrigatório').should('be.visible');
   });
 
   it('valida login sem email e senha', () => {
     cy.get(btnLoginSelector).click();
-    cy.contains(alertSelector, 'email não pode ficar em branco').should('be.visible');
-    cy.contains(alertSelector, 'password não pode ficar em branco').should('be.visible');
+    cy.contains(alertSelector, 'Email é obrigatório').should('be.visible');
+    cy.contains(alertSelector, 'Password é obrigatório').should('be.visible');
   });
 });
