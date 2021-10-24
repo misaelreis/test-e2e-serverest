@@ -8,7 +8,7 @@ const nameSelector = '[data-testid=nome]';
 const descriptionSelector = '[data-testid=descricao]';
 const priceSelector = '[data-testid=preco]';
 const alertSelector = '.alert';
-const quantitySelector = '[data-testid=quantidade]';
+const quantitySelector = '[data-testid=quantity]';
 const btnCreateSelector = '[data-testid=cadastarProdutos]';
 
 describe('Testes - Cadastro de produtos', () => {
@@ -43,7 +43,7 @@ describe('Testes - Cadastro de produtos', () => {
     cy.get(priceSelector).type(prod.preco);
     cy.get(quantitySelector).type(prod.quantidade);
     cy.get(btnCreateSelector).click();
-    cy.contains(alertSelector, 'nome não pode ficar em branco').should('be.visible');
+    cy.contains(alertSelector, 'Nome é obrigatório').should('be.visible');
   });
 
   it('Cadastrar produto sem descrição', () => {
@@ -51,7 +51,7 @@ describe('Testes - Cadastro de produtos', () => {
     cy.get(priceSelector).type(prod.preco);
     cy.get(quantitySelector).type(prod.quantidade);
     cy.get(btnCreateSelector).click();
-    cy.contains(alertSelector, 'descricao não pode ficar em branco').should('be.visible');
+    cy.contains(alertSelector, 'Descricao é obrigatório').should('be.visible');
   });
 
   it('Cadastrar produto sem preço', () => {
@@ -60,7 +60,7 @@ describe('Testes - Cadastro de produtos', () => {
     cy.get(descriptionSelector).type(prod.descricao);
     cy.get(quantitySelector).type(prod.quantidade);
     cy.get(btnCreateSelector).click();
-    cy.contains(alertSelector, 'preco deve ser um número').should('be.visible');
+    cy.contains(alertSelector, 'Preco é obrigatório').should('be.visible');
   });
 
   it('Cadastrar produto tipo de preço incorreto', () => {
@@ -70,7 +70,7 @@ describe('Testes - Cadastro de produtos', () => {
     cy.get(priceSelector).type('a');
     cy.get(quantitySelector).type(prod.quantidade);
     cy.get(btnCreateSelector).click();
-    cy.contains(alertSelector, 'preco deve ser um número').should('be.visible');
+    cy.contains(alertSelector, 'Preco é obrigatório').should('be.visible');
   });
 
   it('Cadastrar produto sem quantidade', () => {
@@ -79,15 +79,15 @@ describe('Testes - Cadastro de produtos', () => {
     cy.get(descriptionSelector).type(prod.descricao);
     cy.get(priceSelector).type(prod.preco);
     cy.get(btnCreateSelector).click();
-    cy.contains(alertSelector, 'quantidade deve ser um número').should('be.visible');
+    cy.contains(alertSelector, 'Quantidade é obrigatório').should('be.visible');
   });
 
   it('Cadastrar produtos - campos obrigatórios', () => {
     cy.get(btnCreateSelector).click();
-    cy.contains(alertSelector, 'preco deve ser um número').should('be.visible');
-    cy.contains(alertSelector, 'quantidade deve ser um número').should('be.visible');
-    cy.contains(alertSelector, 'nome não pode ficar em branco').should('be.visible');
-    cy.contains(alertSelector, 'descricao não pode ficar em branco').should('be.visible');
+    cy.contains(alertSelector, 'Preco é obrigatório').should('be.visible');
+    cy.contains(alertSelector, 'Quantidade é obrigatório').should('be.visible');
+    cy.contains(alertSelector, 'Nome é obrigatório').should('be.visible');
+    cy.contains(alertSelector, 'Descricao é obrigatório').should('be.visible');
   });
 });
 

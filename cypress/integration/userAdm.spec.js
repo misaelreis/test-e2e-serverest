@@ -4,7 +4,7 @@ const faker = require('faker');
 
 const baseUrl = Cypress.config('baseUrl');
 const alertSelector = '.alert';
-const passwordSelector = '[data-testid=senha]';
+const passwordSelector = '[data-testid=password]';
 const nameSelector = '[data-testid=nome]';
 const emailSelector = '[data-testid=email]';
 const btnCreateSelector = '[data-testid=cadastrarUsuario]';
@@ -38,7 +38,7 @@ describe('Testes - Cadastro de usuário Adm', () => {
     cy.get(nameSelector).type(user.name);
     cy.get(emailSelector).type(user.email);
     cy.get(btnCreateSelector).click();
-    cy.contains(alertSelector, 'password não pode ficar em branco').should('be.visible');
+    cy.contains(alertSelector, 'Password é obrigatório').should('be.visible');
   });
 
   it('valida email invalido', () => {
@@ -46,29 +46,28 @@ describe('Testes - Cadastro de usuário Adm', () => {
     cy.get(emailSelector).type('m@m');
     cy.get(passwordSelector).type('teste');
     cy.get(btnCreateSelector).click();
-    cy.contains(alertSelector, 'email deve ser um email válido').should('be.visible');
+    cy.contains(alertSelector, 'Email deve ser um email válido').should('be.visible');
   });
 
   it('valida cadastro sem email', () => {
     cy.get(nameSelector).type(user.name);
     cy.get(passwordSelector).type('teste');
     cy.get(btnCreateSelector).click();
-    cy.contains(alertSelector, 'email não pode ficar em branco').should('be.visible');
+    cy.contains(alertSelector, 'Email é obrigatório').should('be.visible');
   });
 
   it('valida sem nome', () => {
     cy.get(emailSelector).type('misael@mailer.com');
     cy.get(passwordSelector).type('teste');
     cy.get(btnCreateSelector).click();
-    cy.contains(alertSelector, 'nome não pode ficar em branco').should('be.visible');
+    cy.contains(alertSelector, 'Nome é obrigatório').should('be.visible');
   });
 
   it('valida cadastro sem email, senha e nome', () => {
     cy.get(btnCreateSelector).click();
-    cy.contains(alertSelector, 'email não pode ficar em branco').should('be.visible');
-    cy.contains(alertSelector, 'nome não pode ficar em branco').should('be.visible');
-    cy.contains(alertSelector, 'password não pode ficar em branco').should('be.visible');
-    cy.contains(alertSelector, 'email não pode ficar em branco').should('be.visible');
+    cy.contains(alertSelector, 'Email é obrigatório').should('be.visible');
+    cy.contains(alertSelector, 'Nome é obrigatório').should('be.visible');
+    cy.contains(alertSelector, 'Password é obrigatório').should('be.visible');
   });
 });
 
