@@ -1,4 +1,4 @@
-# __Test-e2e-serverest Cypress.io__ ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Misaelreis/test-e2e-serverest/main) [![Badge ServeRest](https://img.shields.io/badge/API-ServeRest-green)](https://github.com/ServeRest/ServeRest/)
+# __Apresentação__ ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Misaelreis/test-e2e-serverest/main) [![Badge ServeRest](https://img.shields.io/badge/API-ServeRest-green)](https://github.com/ServeRest/ServeRest/)
 
 Teste e2e da aplicação [serverest](https://front.serverest.dev/)
 ## __Requisitos__
