@@ -1,0 +1,222 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 5,
+    "failures": -4,
+    "start": "2021-12-06T10:30:01.488Z",
+    "end": "2021-12-06T10:30:12.948Z",
+    "duration": 11460,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 71.42857142857143,
+    "other": 4,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "96c82b5c-cd6f-4f06-8565-b5160fe6ab96",
+      "title": "",
+      "fullFile": "cypress/integration/user.spec.js",
+      "file": "cypress/integration/user.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "74b2400b-92b5-4696-8757-5d8b3a6dbe92",
+          "title": "Testes - Cadastro de usuário",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "valida cadastro usuário adm sucesso",
+              "fullTitle": "Testes - Cadastro de usuário valida cadastro usuário adm sucesso",
+              "timedOut": null,
+              "duration": 6071,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "user.email = faker.internet.email();\ncy.createUserAdm(user.name, user.email, user.password);\ncy.contains(alertSelector, 'Cadastro realizado com sucesso').should('be.visible');\ncy.url().should('be.equal', `${baseUrl}admin/home`);",
+              "err": {},
+              "uuid": "1eef0431-66e4-4921-865f-ef3fc4de43cc",
+              "parentUUID": "74b2400b-92b5-4696-8757-5d8b3a6dbe92",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "valida cadastro usuário sucesso",
+              "fullTitle": "Testes - Cadastro de usuário valida cadastro usuário sucesso",
+              "timedOut": null,
+              "duration": 5170,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "user.email = faker.internet.email();\ncy.createUser(user.name, user.email, user.password);\ncy.contains(alertSelector, 'Cadastro realizado com sucesso').should('be.visible');\ncy.url().should('be.equal', `${baseUrl}home`);",
+              "err": {},
+              "uuid": "90434c85-e708-4997-aa38-b335142f7982",
+              "parentUUID": "74b2400b-92b5-4696-8757-5d8b3a6dbe92",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "valida cadastro sem senha",
+              "fullTitle": "Testes - Cadastro de usuário valida cadastro sem senha",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "f62dd028-8839-4afe-ac9c-2e89d6022483",
+              "parentUUID": "74b2400b-92b5-4696-8757-5d8b3a6dbe92",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "valida email invalido",
+              "fullTitle": "Testes - Cadastro de usuário valida email invalido",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "a92870cb-9e81-4ac8-a3d0-9d359189e6ad",
+              "parentUUID": "74b2400b-92b5-4696-8757-5d8b3a6dbe92",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "valida cadastro sem email",
+              "fullTitle": "Testes - Cadastro de usuário valida cadastro sem email",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "5f9555f0-3f10-4e32-81fe-ea51867aa3d0",
+              "parentUUID": "74b2400b-92b5-4696-8757-5d8b3a6dbe92",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "valida sem nome",
+              "fullTitle": "Testes - Cadastro de usuário valida sem nome",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "058ddecf-6b52-4f8b-a6bf-8d3bf9efb018",
+              "parentUUID": "74b2400b-92b5-4696-8757-5d8b3a6dbe92",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "valida cadastro sem email, senha e nome",
+              "fullTitle": "Testes - Cadastro de usuário valida cadastro sem email, senha e nome",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "f9318cf9-99aa-44f5-8f8e-ce756d4bcf6e",
+              "parentUUID": "74b2400b-92b5-4696-8757-5d8b3a6dbe92",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1eef0431-66e4-4921-865f-ef3fc4de43cc",
+            "90434c85-e708-4997-aa38-b335142f7982"
+          ],
+          "failures": [],
+          "pending": [
+            "f62dd028-8839-4afe-ac9c-2e89d6022483",
+            "a92870cb-9e81-4ac8-a3d0-9d359189e6ad",
+            "5f9555f0-3f10-4e32-81fe-ea51867aa3d0",
+            "058ddecf-6b52-4f8b-a6bf-8d3bf9efb018",
+            "f9318cf9-99aa-44f5-8f8e-ce756d4bcf6e"
+          ],
+          "skipped": [],
+          "duration": 11241,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reporterDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

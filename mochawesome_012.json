@@ -1,0 +1,221 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-12-06T10:33:25.108Z",
+    "end": "2021-12-06T10:33:43.149Z",
+    "duration": 18041,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6d960d0c-ffde-441d-93d7-abc8ddf2aaaa",
+      "title": "",
+      "fullFile": "cypress/integration/user.spec.js",
+      "file": "cypress/integration/user.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "536d61c7-186b-4bab-861e-e878d4df8aa0",
+          "title": "Testes - Cadastro de usuário",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "valida cadastro usuário adm sucesso",
+              "fullTitle": "Testes - Cadastro de usuário valida cadastro usuário adm sucesso",
+              "timedOut": null,
+              "duration": 6084,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "user.email = faker.internet.email();\ncy.createUserAdm(user.name, user.email, user.password);\ncy.contains(alertSelector, 'Cadastro realizado com sucesso').should('be.visible');\ncy.url().should('be.equal', `${baseUrl}admin/home`);",
+              "err": {},
+              "uuid": "426f3e38-dd55-490b-80fd-493efd4e491c",
+              "parentUUID": "536d61c7-186b-4bab-861e-e878d4df8aa0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "valida cadastro usuário sucesso",
+              "fullTitle": "Testes - Cadastro de usuário valida cadastro usuário sucesso",
+              "timedOut": null,
+              "duration": 5275,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "user.email = faker.internet.email();\ncy.createUser(user.name, user.email, user.password);\ncy.contains(alertSelector, 'Cadastro realizado com sucesso').should('be.visible');\ncy.url().should('be.equal', `${baseUrl}home`);",
+              "err": {},
+              "uuid": "ef44b0c8-d629-4331-b082-400b6645f976",
+              "parentUUID": "536d61c7-186b-4bab-861e-e878d4df8aa0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "valida cadastro sem senha",
+              "fullTitle": "Testes - Cadastro de usuário valida cadastro sem senha",
+              "timedOut": null,
+              "duration": 1598,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(nameSelector).type(user.name);\ncy.get(emailSelector).type(user.email);\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Password é obrigatório').should('be.visible');",
+              "err": {},
+              "uuid": "2511babe-8eb0-44be-b139-edc81ec267cd",
+              "parentUUID": "536d61c7-186b-4bab-861e-e878d4df8aa0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "valida email invalido",
+              "fullTitle": "Testes - Cadastro de usuário valida email invalido",
+              "timedOut": null,
+              "duration": 1614,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(nameSelector).type('Maria');\ncy.get(emailSelector).type('m@m');\ncy.get(passwordSelector).type('teste');\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Email deve ser um email válido').should('be.visible');",
+              "err": {},
+              "uuid": "0f727c02-14c8-4ac0-ae19-377b5810f650",
+              "parentUUID": "536d61c7-186b-4bab-861e-e878d4df8aa0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "valida cadastro sem email",
+              "fullTitle": "Testes - Cadastro de usuário valida cadastro sem email",
+              "timedOut": null,
+              "duration": 1109,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(nameSelector).type('Maria');\ncy.get(passwordSelector).type('teste');\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Email é obrigatório').should('be.visible');",
+              "err": {},
+              "uuid": "ae97016d-b9e1-4a67-b383-ae2e9e27db10",
+              "parentUUID": "536d61c7-186b-4bab-861e-e878d4df8aa0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "valida sem nome",
+              "fullTitle": "Testes - Cadastro de usuário valida sem nome",
+              "timedOut": null,
+              "duration": 1383,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(emailSelector).type('misael@email.com');\ncy.get(passwordSelector).type('teste');\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Nome é obrigatório').should('be.visible');",
+              "err": {},
+              "uuid": "26e2c462-fc36-4a32-9583-bf62877317d1",
+              "parentUUID": "536d61c7-186b-4bab-861e-e878d4df8aa0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "valida cadastro sem email, senha e nome",
+              "fullTitle": "Testes - Cadastro de usuário valida cadastro sem email, senha e nome",
+              "timedOut": null,
+              "duration": 792,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Email é obrigatório').should('be.visible');\ncy.contains(alertSelector, 'Password é obrigatório').should('be.visible');\ncy.contains(alertSelector, 'Nome é obrigatório').should('be.visible');",
+              "err": {},
+              "uuid": "1048ed0f-dd6e-4c1d-8b7e-d179c4cb58ca",
+              "parentUUID": "536d61c7-186b-4bab-861e-e878d4df8aa0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "426f3e38-dd55-490b-80fd-493efd4e491c",
+            "ef44b0c8-d629-4331-b082-400b6645f976",
+            "2511babe-8eb0-44be-b139-edc81ec267cd",
+            "0f727c02-14c8-4ac0-ae19-377b5810f650",
+            "ae97016d-b9e1-4a67-b383-ae2e9e27db10",
+            "26e2c462-fc36-4a32-9583-bf62877317d1",
+            "1048ed0f-dd6e-4c1d-8b7e-d179c4cb58ca"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17855,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reporterDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
