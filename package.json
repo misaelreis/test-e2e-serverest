@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run",
+    "report:merge": "mochawesome-merge > index.json",
+    "report:mocha": "marge index.json",
+    "report:cleam": "rimraf mochawesome-report index.js"
   },
   "keywords": [],
   "author": "Misael Reis",
@@ -17,9 +20,14 @@
     "cypress": "^9.0.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-grep": "^2.5.3",
+    "cypress-multi-reporters": "^1.5.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-cypress": "^2.12.1",
-    "eslint-plugin-import": "^2.24.2"
+    "eslint-plugin-import": "^2.24.2",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.0.1",
+    "rimraf": "^3.0.2"
   }
 }

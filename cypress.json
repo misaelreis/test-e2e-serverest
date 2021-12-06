@@ -2,5 +2,10 @@
     "baseUrl": "https://front.serverest.dev/",
     "watchForFileChanges" : false,
     "defaultCommandTimeout": 20000,
-    "pluginsFile": false
+    "pluginsFile": false,
+    
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
+    }
 }

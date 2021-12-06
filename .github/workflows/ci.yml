@@ -15,11 +15,21 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+    
+    - name: Use Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        node-version: 14.x
     - run: npm install
     - run: npx cypress run --env grepTags=smoke
-    - run: npm run cypress:run
+    - run: npm run cy:run
+      continue-on-error: true
+    - run: npm run report:merge
+    - run: npm run report:mocha
+  
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.7
+      with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: mochawesome-report
