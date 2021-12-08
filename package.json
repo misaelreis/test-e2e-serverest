@@ -17,7 +17,7 @@
     "faker": "5.5.3"
   },
   "devDependencies": {
-    "cypress": "^9.0.0",
+    "cypress": "^9.1.1",
     "cypress-file-upload": "^5.0.8",
     "cypress-grep": "^2.5.3",
     "cypress-multi-reporters": "^1.5.0",

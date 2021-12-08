@@ -61,16 +61,7 @@ Cypress.Commands.add('createLoginUser', () => {
 });
 
 Cypress.Commands.add('createProduct', () => {
-  cy.createUserFix();
-  cy.request({
-    method: 'POST',
-    Headers: { accept: '/' },
-    url: 'https://serverest.dev/login',
-    body: {
-      email: Cypress.env('admUser'),
-      password: Cypress.env('password'),
-    },
-  }).then(({ body }) => {
+  cy.createLoginAdm().then(({ body }) => {
     cy.request({
       failOnStatusCode: false,
       method: 'POST',
