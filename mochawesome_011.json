@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-02-22T16:58:56.798Z",
-    "end": "2022-02-22T16:58:58.175Z",
-    "duration": 1377,
+    "start": "2022-03-01T16:59:51.226Z",
+    "end": "2022-03-01T16:59:52.711Z",
+    "duration": 1485,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "6d44ddf3-1338-4a62-a247-76f16c1f5549",
+      "uuid": "78b3e553-8555-4603-8dd0-f448409c9520",
       "title": "",
-      "fullFile": "cypress/integration/report.spec.js",
-      "file": "cypress/integration/report.spec.js",
+      "fullFile": "",
+      "file": "",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "0f5fca96-ee31-44a4-892a-ada7f3920340",
+          "uuid": "720c704c-ee85-4856-abd4-6f20914eb0ee",
           "title": "Testes - relatório",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "valida página de cadastro",
               "fullTitle": "Testes - relatório valida página de cadastro",
               "timedOut": null,
-              "duration": 1339,
+              "duration": 1456,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.url().should('be.equal', `${baseUrl}admin/relatorios`);\ncy.contains('h1', 'Em construção aguarde').should('be.visible');",
               "err": {},
-              "uuid": "4040feb1-e898-4dcc-9193-97567393d0f8",
-              "parentUUID": "0f5fca96-ee31-44a4-892a-ada7f3920340",
+              "uuid": "d577c01c-40f9-4dcd-ae8b-da0dcd45c148",
+              "parentUUID": "720c704c-ee85-4856-abd4-6f20914eb0ee",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "4040feb1-e898-4dcc-9193-97567393d0f8"
+            "d577c01c-40f9-4dcd-ae8b-da0dcd45c148"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1339,
+          "duration": 1456,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -90,7 +90,7 @@
         "useInlineDiffs": false,
         "code": true
       },
-      "version": "7.0.1"
+      "version": "7.1.0"
     },
     "marge": {
       "options": {
@@ -101,7 +101,7 @@
         "html": false,
         "json": true
       },
-      "version": "6.0.1"
+      "version": "6.1.0"
     }
   }
 }

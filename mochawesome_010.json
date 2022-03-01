@@ -5,9 +5,9 @@
     "passes": 10,
     "pending": 0,
     "failures": 0,
-    "start": "2022-02-22T16:58:33.800Z",
-    "end": "2022-02-22T16:58:49.624Z",
-    "duration": 15824,
+    "start": "2022-03-01T16:59:25.236Z",
+    "end": "2022-03-01T16:59:41.111Z",
+    "duration": 15875,
     "testsRegistered": 10,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f311a64b-2269-43c8-8351-4f9f0b3348dc",
+      "uuid": "75db43b4-28da-4bdb-b108-85059f181323",
       "title": "",
       "fullFile": "cypress/integration/product.spec.js",
       "file": "cypress/integration/product.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "abcaad98-7621-49ef-b335-0f8e2404a947",
+          "uuid": "b97e0c72-f3f4-45b0-9b5b-c10bc794d7dc",
           "title": "Testes - Cadastro de produtos",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "valida página de cadastro",
               "fullTitle": "Testes - Cadastro de produtos valida página de cadastro",
               "timedOut": null,
-              "duration": 1200,
+              "duration": 1285,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.contains('h1', 'Cadastro de Produtos').should('be.visible');",
               "err": {},
-              "uuid": "01479422-b21e-4efe-86d1-4f56775aba35",
-              "parentUUID": "abcaad98-7621-49ef-b335-0f8e2404a947",
+              "uuid": "30b69cf4-a3a0-4ee7-a694-fb82ca8d20cd",
+              "parentUUID": "b97e0c72-f3f4-45b0-9b5b-c10bc794d7dc",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Cadastrar produto com sucesso",
               "fullTitle": "Testes - Cadastro de produtos Cadastrar produto com sucesso",
               "timedOut": null,
-              "duration": 2297,
+              "duration": 2230,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.get(imageSelector).attachFile('cy.png');\ncy.get(nameSelector).type(prod.nome);\ncy.get(descriptionSelector).type(prod.descricao);\ncy.get(priceSelector).type(prod.preco);\ncy.get(quantitySelector).type(prod.quantidade);\ncy.get(btnCreateSelector).click();\ncy.url().should('be.equal', `${baseUrl}admin/listarprodutos`);",
               "err": {},
-              "uuid": "5a4914df-8855-4598-823d-cfece101093c",
-              "parentUUID": "abcaad98-7621-49ef-b335-0f8e2404a947",
+              "uuid": "e0052db4-d167-4c31-9253-80d22094b411",
+              "parentUUID": "b97e0c72-f3f4-45b0-9b5b-c10bc794d7dc",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Cadastrar produto sem nome",
               "fullTitle": "Testes - Cadastro de produtos Cadastrar produto sem nome",
               "timedOut": null,
-              "duration": 2047,
+              "duration": 1946,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,8 +83,8 @@
               "context": null,
               "code": "cy.get(descriptionSelector).type(prod.descricao);\ncy.get(priceSelector).type(prod.preco);\ncy.get(quantitySelector).type(prod.quantidade);\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Nome é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "613facad-e864-4273-b81e-1a4ceab36b1a",
-              "parentUUID": "abcaad98-7621-49ef-b335-0f8e2404a947",
+              "uuid": "0307dad4-7937-43f2-8a6b-7efce0406377",
+              "parentUUID": "b97e0c72-f3f4-45b0-9b5b-c10bc794d7dc",
               "isHook": false,
               "skipped": false
             },
@@ -92,7 +92,7 @@
               "title": "Cadastrar produto sem descrição",
               "fullTitle": "Testes - Cadastro de produtos Cadastrar produto sem descrição",
               "timedOut": null,
-              "duration": 1503,
+              "duration": 1500,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -101,8 +101,8 @@
               "context": null,
               "code": "cy.get(nameSelector).type(prod.nome);\ncy.get(priceSelector).type(prod.preco);\ncy.get(quantitySelector).type(prod.quantidade);\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Descricao é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "43ef9fd2-65b4-421f-a95f-b31d70460fbb",
-              "parentUUID": "abcaad98-7621-49ef-b335-0f8e2404a947",
+              "uuid": "bc6528e4-e052-4180-a6e4-5503894913c9",
+              "parentUUID": "b97e0c72-f3f4-45b0-9b5b-c10bc794d7dc",
               "isHook": false,
               "skipped": false
             },
@@ -110,7 +110,7 @@
               "title": "Cadastrar produto sem preço",
               "fullTitle": "Testes - Cadastro de produtos Cadastrar produto sem preço",
               "timedOut": null,
-              "duration": 1864,
+              "duration": 2037,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -119,8 +119,8 @@
               "context": null,
               "code": "cy.get(imageSelector).attachFile('cy.png');\ncy.get(nameSelector).type(prod.nome);\ncy.get(descriptionSelector).type(prod.descricao);\ncy.get(quantitySelector).type(prod.quantidade);\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Preco é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "27efa42f-485c-4412-9f86-bba99d928ad9",
-              "parentUUID": "abcaad98-7621-49ef-b335-0f8e2404a947",
+              "uuid": "fff16e7c-0775-4ff4-8f2a-980227b81915",
+              "parentUUID": "b97e0c72-f3f4-45b0-9b5b-c10bc794d7dc",
               "isHook": false,
               "skipped": false
             },
@@ -128,7 +128,7 @@
               "title": "Cadastrar produto tipo de preço incorreto",
               "fullTitle": "Testes - Cadastro de produtos Cadastrar produto tipo de preço incorreto",
               "timedOut": null,
-              "duration": 2214,
+              "duration": 2119,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -137,8 +137,8 @@
               "context": null,
               "code": "cy.get(imageSelector).attachFile('cy.png');\ncy.get(nameSelector).type(prod.nome);\ncy.get(descriptionSelector).type(prod.descricao);\ncy.get(priceSelector).type('a');\ncy.get(quantitySelector).type(prod.quantidade);\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Preco é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "99b64e38-3a1c-42e5-ac12-4f3a18603cb4",
-              "parentUUID": "abcaad98-7621-49ef-b335-0f8e2404a947",
+              "uuid": "f63b2c14-6776-48c7-a4a4-30ecf462fac5",
+              "parentUUID": "b97e0c72-f3f4-45b0-9b5b-c10bc794d7dc",
               "isHook": false,
               "skipped": false
             },
@@ -146,7 +146,7 @@
               "title": "Cadastrar produto sem quantidade",
               "fullTitle": "Testes - Cadastro de produtos Cadastrar produto sem quantidade",
               "timedOut": null,
-              "duration": 1863,
+              "duration": 1953,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -155,8 +155,8 @@
               "context": null,
               "code": "cy.get(imageSelector).attachFile('cy.png');\ncy.get(nameSelector).type(prod.nome);\ncy.get(descriptionSelector).type(prod.descricao);\ncy.get(priceSelector).type(prod.preco);\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Quantidade é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "02815090-0700-4e8b-857c-c3b569612ff1",
-              "parentUUID": "abcaad98-7621-49ef-b335-0f8e2404a947",
+              "uuid": "961b26a7-c944-4156-8429-19a684399a75",
+              "parentUUID": "b97e0c72-f3f4-45b0-9b5b-c10bc794d7dc",
               "isHook": false,
               "skipped": false
             },
@@ -164,7 +164,7 @@
               "title": "Cadastrar produtos - campos obrigatórios",
               "fullTitle": "Testes - Cadastro de produtos Cadastrar produtos - campos obrigatórios",
               "timedOut": null,
-              "duration": 991,
+              "duration": 947,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -173,33 +173,33 @@
               "context": null,
               "code": "cy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Preco é obrigatório').should('be.visible');\ncy.contains(alertSelector, 'Quantidade é obrigatório').should('be.visible');\ncy.contains(alertSelector, 'Nome é obrigatório').should('be.visible');\ncy.contains(alertSelector, 'Descricao é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "fa2adb93-2eb6-4e73-a1ef-0722d5396087",
-              "parentUUID": "abcaad98-7621-49ef-b335-0f8e2404a947",
+              "uuid": "7f88b46f-990e-4f46-af1e-d31784c8ce77",
+              "parentUUID": "b97e0c72-f3f4-45b0-9b5b-c10bc794d7dc",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "01479422-b21e-4efe-86d1-4f56775aba35",
-            "5a4914df-8855-4598-823d-cfece101093c",
-            "613facad-e864-4273-b81e-1a4ceab36b1a",
-            "43ef9fd2-65b4-421f-a95f-b31d70460fbb",
-            "27efa42f-485c-4412-9f86-bba99d928ad9",
-            "99b64e38-3a1c-42e5-ac12-4f3a18603cb4",
-            "02815090-0700-4e8b-857c-c3b569612ff1",
-            "fa2adb93-2eb6-4e73-a1ef-0722d5396087"
+            "30b69cf4-a3a0-4ee7-a694-fb82ca8d20cd",
+            "e0052db4-d167-4c31-9253-80d22094b411",
+            "0307dad4-7937-43f2-8a6b-7efce0406377",
+            "bc6528e4-e052-4180-a6e4-5503894913c9",
+            "fff16e7c-0775-4ff4-8f2a-980227b81915",
+            "f63b2c14-6776-48c7-a4a4-30ecf462fac5",
+            "961b26a7-c944-4156-8429-19a684399a75",
+            "7f88b46f-990e-4f46-af1e-d31784c8ce77"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13979,
+          "duration": 14017,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "a1d577e0-29fa-4f0f-8612-af0c7442d9f5",
+          "uuid": "7d9d711f-389f-44f1-b94e-88ceb8b0f04c",
           "title": "Testes - Excluir produtos",
           "fullFile": "",
           "file": "",
@@ -210,7 +210,7 @@
               "title": "valida página de listagem",
               "fullTitle": "Testes - Excluir produtos valida página de listagem",
               "timedOut": null,
-              "duration": 685,
+              "duration": 683,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -219,8 +219,8 @@
               "context": null,
               "code": "cy.contains('h1', 'Lista dos Produtos').should('be.visible');",
               "err": {},
-              "uuid": "faa1d73e-54c3-44fc-a82c-961ea4de6bca",
-              "parentUUID": "a1d577e0-29fa-4f0f-8612-af0c7442d9f5",
+              "uuid": "abab3d06-8e07-496b-9171-aca2780213aa",
+              "parentUUID": "7d9d711f-389f-44f1-b94e-88ceb8b0f04c",
               "isHook": false,
               "skipped": false
             },
@@ -228,7 +228,7 @@
               "title": "excluir produto",
               "fullTitle": "Testes - Excluir produtos excluir produto",
               "timedOut": null,
-              "duration": 961,
+              "duration": 871,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -237,21 +237,21 @@
               "context": null,
               "code": "cy.get(':nth-child(1) > :nth-child(6) > .row > .btn-danger').click();",
               "err": {},
-              "uuid": "e376b54c-674c-4d99-b9bc-fe1051d19809",
-              "parentUUID": "a1d577e0-29fa-4f0f-8612-af0c7442d9f5",
+              "uuid": "abdbbbb8-fdd8-4feb-aed7-3d33e66c3e1a",
+              "parentUUID": "7d9d711f-389f-44f1-b94e-88ceb8b0f04c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "faa1d73e-54c3-44fc-a82c-961ea4de6bca",
-            "e376b54c-674c-4d99-b9bc-fe1051d19809"
+            "abab3d06-8e07-496b-9171-aca2780213aa",
+            "abdbbbb8-fdd8-4feb-aed7-3d33e66c3e1a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1646,
+          "duration": 1554,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -281,7 +281,7 @@
         "useInlineDiffs": false,
         "code": true
       },
-      "version": "7.0.1"
+      "version": "7.1.0"
     },
     "marge": {
       "options": {
@@ -292,7 +292,7 @@
         "html": false,
         "json": true
       },
-      "version": "6.0.1"
+      "version": "6.1.0"
     }
   }
 }

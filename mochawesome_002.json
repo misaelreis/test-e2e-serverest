@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 7,
     "failures": -6,
-    "start": "2022-02-22T16:56:03.653Z",
-    "end": "2022-02-22T16:56:09.991Z",
-    "duration": 6338,
+    "start": "2022-03-01T16:56:10.702Z",
+    "end": "2022-03-01T16:56:17.250Z",
+    "duration": 6548,
     "testsRegistered": 10,
     "passPercent": 100,
     "pendingPercent": 70,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "906e6027-e694-42f0-859f-d838d5a398bc",
+      "uuid": "97f301ff-3642-4628-9781-c9f3a91a6f37",
       "title": "",
-      "fullFile": "cypress/integration/login.spec.js",
-      "file": "cypress/integration/login.spec.js",
+      "fullFile": "",
+      "file": "",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "1d5dd33d-f4f4-4f02-ab5c-043d9fc19897",
+          "uuid": "414f978d-961e-4a7f-89f3-02015c3b2d8e",
           "title": "Testes de Login",
           "fullFile": "",
           "file": "",
@@ -47,8 +47,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "4519fec3-518c-4295-8a52-d3281c31e757",
-              "parentUUID": "1d5dd33d-f4f4-4f02-ab5c-043d9fc19897",
+              "uuid": "8e85f562-6900-4bbb-9d70-06d9074877a0",
+              "parentUUID": "414f978d-961e-4a7f-89f3-02015c3b2d8e",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "valida login adm sucesso",
               "fullTitle": "Testes de Login valida login adm sucesso",
               "timedOut": null,
-              "duration": 2336,
+              "duration": 2667,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.login(Cypress.env('admUser'), Cypress.env('password'));\ncy.url().should('be.equal', `${baseUrl}admin/home`);",
               "err": {},
-              "uuid": "60577354-0430-4ace-8d7a-cd232e2f2837",
-              "parentUUID": "1d5dd33d-f4f4-4f02-ab5c-043d9fc19897",
+              "uuid": "b66ca8e1-624e-4e65-80a4-abaef01211a3",
+              "parentUUID": "414f978d-961e-4a7f-89f3-02015c3b2d8e",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "valida login user sucesso",
               "fullTitle": "Testes de Login valida login user sucesso",
               "timedOut": null,
-              "duration": 1569,
+              "duration": 1615,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,8 +83,8 @@
               "context": null,
               "code": "cy.login(Cypress.env('user'), Cypress.env('password'));\ncy.url().should('be.equal', `${baseUrl}home`);",
               "err": {},
-              "uuid": "9d79fd71-3b55-4cd3-90b3-47ab6e2e2e2a",
-              "parentUUID": "1d5dd33d-f4f4-4f02-ab5c-043d9fc19897",
+              "uuid": "3a1d4940-3911-4f8d-961c-ec89fd099020",
+              "parentUUID": "414f978d-961e-4a7f-89f3-02015c3b2d8e",
               "isHook": false,
               "skipped": false
             },
@@ -101,8 +101,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "acd79c48-968c-4bb5-873b-8d49b38016d9",
-              "parentUUID": "1d5dd33d-f4f4-4f02-ab5c-043d9fc19897",
+              "uuid": "18714aad-fed5-4ae4-ada5-25bfc325ebc1",
+              "parentUUID": "414f978d-961e-4a7f-89f3-02015c3b2d8e",
               "isHook": false,
               "skipped": false
             },
@@ -119,8 +119,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "050e5c55-0f68-4eaf-bfda-8129f8b5502c",
-              "parentUUID": "1d5dd33d-f4f4-4f02-ab5c-043d9fc19897",
+              "uuid": "c169ef32-7b09-448f-9194-fcc846fbe982",
+              "parentUUID": "414f978d-961e-4a7f-89f3-02015c3b2d8e",
               "isHook": false,
               "skipped": false
             },
@@ -128,7 +128,7 @@
               "title": "valida logout sucesso",
               "fullTitle": "Testes de Login valida logout sucesso",
               "timedOut": null,
-              "duration": 2288,
+              "duration": 2115,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -137,8 +137,8 @@
               "context": null,
               "code": "cy.login(Cypress.env('user'), Cypress.env('password'));\ncy.get('[data-testid=logout]').click();\ncy.url().should('be.equal', `${baseUrl}login`);",
               "err": {},
-              "uuid": "f6e1080f-f127-4ee2-b185-4bf7d6c25bcc",
-              "parentUUID": "1d5dd33d-f4f4-4f02-ab5c-043d9fc19897",
+              "uuid": "5a993d18-7296-4769-80db-5c2afb871863",
+              "parentUUID": "414f978d-961e-4a7f-89f3-02015c3b2d8e",
               "isHook": false,
               "skipped": false
             },
@@ -155,8 +155,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "b556ea72-8f3a-4bd4-b46b-b6af912f7fd4",
-              "parentUUID": "1d5dd33d-f4f4-4f02-ab5c-043d9fc19897",
+              "uuid": "9bce9663-ab35-4139-88d3-6271441f84df",
+              "parentUUID": "414f978d-961e-4a7f-89f3-02015c3b2d8e",
               "isHook": false,
               "skipped": false
             },
@@ -173,8 +173,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "c25c105d-5213-4e4d-abcc-65ac5d42f1a6",
-              "parentUUID": "1d5dd33d-f4f4-4f02-ab5c-043d9fc19897",
+              "uuid": "295911fb-4636-4dee-801d-13a4dd7f77f8",
+              "parentUUID": "414f978d-961e-4a7f-89f3-02015c3b2d8e",
               "isHook": false,
               "skipped": false
             },
@@ -191,8 +191,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "b6d0103a-2ef0-44f8-bb75-784cfbf09b1a",
-              "parentUUID": "1d5dd33d-f4f4-4f02-ab5c-043d9fc19897",
+              "uuid": "7d852561-ecc9-4069-add7-86c534f9c0a6",
+              "parentUUID": "414f978d-961e-4a7f-89f3-02015c3b2d8e",
               "isHook": false,
               "skipped": false
             },
@@ -209,30 +209,30 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "dd60e163-2a09-40b2-a440-bc680d651ffb",
-              "parentUUID": "1d5dd33d-f4f4-4f02-ab5c-043d9fc19897",
+              "uuid": "092c8645-eec9-4267-9d39-802e115fb4d4",
+              "parentUUID": "414f978d-961e-4a7f-89f3-02015c3b2d8e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "60577354-0430-4ace-8d7a-cd232e2f2837",
-            "9d79fd71-3b55-4cd3-90b3-47ab6e2e2e2a",
-            "f6e1080f-f127-4ee2-b185-4bf7d6c25bcc"
+            "b66ca8e1-624e-4e65-80a4-abaef01211a3",
+            "3a1d4940-3911-4f8d-961c-ec89fd099020",
+            "5a993d18-7296-4769-80db-5c2afb871863"
           ],
           "failures": [],
           "pending": [
-            "4519fec3-518c-4295-8a52-d3281c31e757",
-            "acd79c48-968c-4bb5-873b-8d49b38016d9",
-            "050e5c55-0f68-4eaf-bfda-8129f8b5502c",
-            "b556ea72-8f3a-4bd4-b46b-b6af912f7fd4",
-            "c25c105d-5213-4e4d-abcc-65ac5d42f1a6",
-            "b6d0103a-2ef0-44f8-bb75-784cfbf09b1a",
-            "dd60e163-2a09-40b2-a440-bc680d651ffb"
+            "8e85f562-6900-4bbb-9d70-06d9074877a0",
+            "18714aad-fed5-4ae4-ada5-25bfc325ebc1",
+            "c169ef32-7b09-448f-9194-fcc846fbe982",
+            "9bce9663-ab35-4139-88d3-6271441f84df",
+            "295911fb-4636-4dee-801d-13a4dd7f77f8",
+            "7d852561-ecc9-4069-add7-86c534f9c0a6",
+            "092c8645-eec9-4267-9d39-802e115fb4d4"
           ],
           "skipped": [],
-          "duration": 6193,
+          "duration": 6397,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -262,7 +262,7 @@
         "useInlineDiffs": false,
         "code": true
       },
-      "version": "7.0.1"
+      "version": "7.1.0"
     },
     "marge": {
       "options": {
@@ -273,7 +273,7 @@
         "html": false,
         "json": true
       },
-      "version": "6.0.1"
+      "version": "6.1.0"
     }
   }
 }
