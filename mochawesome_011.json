@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-03-01T16:59:51.226Z",
-    "end": "2022-03-01T16:59:52.711Z",
-    "duration": 1485,
+    "start": "2022-03-08T17:02:05.271Z",
+    "end": "2022-03-08T17:02:06.943Z",
+    "duration": 1672,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "78b3e553-8555-4603-8dd0-f448409c9520",
+      "uuid": "2144af30-de29-4086-832b-2d2300307aff",
       "title": "",
-      "fullFile": "",
-      "file": "",
+      "fullFile": "cypress/integration/report.spec.js",
+      "file": "cypress/integration/report.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "720c704c-ee85-4856-abd4-6f20914eb0ee",
+          "uuid": "c4599991-2f6c-4681-b765-944e6afec819",
           "title": "Testes - relatório",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "valida página de cadastro",
               "fullTitle": "Testes - relatório valida página de cadastro",
               "timedOut": null,
-              "duration": 1456,
+              "duration": 1609,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.url().should('be.equal', `${baseUrl}admin/relatorios`);\ncy.contains('h1', 'Em construção aguarde').should('be.visible');",
               "err": {},
-              "uuid": "d577c01c-40f9-4dcd-ae8b-da0dcd45c148",
-              "parentUUID": "720c704c-ee85-4856-abd4-6f20914eb0ee",
+              "uuid": "4375d137-2e02-4876-b571-2a25840896d0",
+              "parentUUID": "c4599991-2f6c-4681-b765-944e6afec819",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d577c01c-40f9-4dcd-ae8b-da0dcd45c148"
+            "4375d137-2e02-4876-b571-2a25840896d0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1456,
+          "duration": 1609,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -90,7 +90,7 @@
         "useInlineDiffs": false,
         "code": true
       },
-      "version": "7.1.0"
+      "version": "7.1.2"
     },
     "marge": {
       "options": {
@@ -101,7 +101,7 @@
         "html": false,
         "json": true
       },
-      "version": "6.1.0"
+      "version": "6.1.1"
     }
   }
 }

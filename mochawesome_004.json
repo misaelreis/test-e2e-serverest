@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 1,
     "failures": 0,
-    "start": "2022-03-01T16:56:43.758Z",
-    "end": "2022-03-01T16:56:43.820Z",
-    "duration": 62,
+    "start": "2022-03-08T16:58:19.141Z",
+    "end": "2022-03-08T16:58:19.164Z",
+    "duration": 23,
     "testsRegistered": 1,
     "passPercent": null,
     "pendingPercent": 100,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "e39b201d-b127-4c09-9260-d3d0d84f5dfa",
+      "uuid": "48a34231-d33f-4778-9005-dbb8c1249823",
       "title": "",
-      "fullFile": "",
-      "file": "",
+      "fullFile": "cypress/integration/report.spec.js",
+      "file": "cypress/integration/report.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "65407466-2ed6-4f73-becf-d4ef879ed746",
+          "uuid": "ce617401-db20-46bd-b61d-3c0f114b4798",
           "title": "Testes - relatório",
           "fullFile": "",
           "file": "",
@@ -47,8 +47,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "b9fd11a4-ed38-4450-bc87-d23c129b3689",
-              "parentUUID": "65407466-2ed6-4f73-becf-d4ef879ed746",
+              "uuid": "56fd1efa-d134-4c3f-9094-a3e93eca96bd",
+              "parentUUID": "ce617401-db20-46bd-b61d-3c0f114b4798",
               "isHook": false,
               "skipped": false
             }
@@ -57,7 +57,7 @@
           "passes": [],
           "failures": [],
           "pending": [
-            "b9fd11a4-ed38-4450-bc87-d23c129b3689"
+            "56fd1efa-d134-4c3f-9094-a3e93eca96bd"
           ],
           "skipped": [],
           "duration": 0,
@@ -90,7 +90,7 @@
         "useInlineDiffs": false,
         "code": true
       },
-      "version": "7.1.0"
+      "version": "7.1.2"
     },
     "marge": {
       "options": {
@@ -101,7 +101,7 @@
         "html": false,
         "json": true
       },
-      "version": "6.1.0"
+      "version": "6.1.1"
     }
   }
 }
