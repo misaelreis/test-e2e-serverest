@@ -5,9 +5,9 @@
     "passes": 7,
     "pending": 0,
     "failures": 0,
-    "start": "2022-03-22T17:06:26.425Z",
-    "end": "2022-03-22T17:06:41.985Z",
-    "duration": 15560,
+    "start": "2022-03-29T17:00:17.601Z",
+    "end": "2022-03-29T17:00:33.468Z",
+    "duration": 15867,
     "testsRegistered": 7,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f88030b1-7dee-49bb-b015-3df1c3077035",
+      "uuid": "cb002242-05d8-4b21-8d43-8abee0b72fd6",
       "title": "",
       "fullFile": "cypress/integration/user.spec.js",
       "file": "cypress/integration/user.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e987ec5c-a318-466e-a78b-8787b3a36751",
+          "uuid": "11cefb00-d2aa-4feb-87f1-5abd05900330",
           "title": "Testes - Cadastro de usuário",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "valida cadastro usuário adm sucesso",
               "fullTitle": "Testes - Cadastro de usuário valida cadastro usuário adm sucesso",
               "timedOut": null,
-              "duration": 5360,
+              "duration": 5400,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "user.email = faker.internet.email();\ncy.createUserAdm(user.name, user.email, user.password);\ncy.contains(alertSelector, 'Cadastro realizado com sucesso').should('be.visible');\ncy.url().should('be.equal', `${baseUrl}admin/home`);",
               "err": {},
-              "uuid": "a889f6e4-5623-40a4-abba-9518cc7a50da",
-              "parentUUID": "e987ec5c-a318-466e-a78b-8787b3a36751",
+              "uuid": "d8fd6800-c4b5-4298-9f86-8bb1c915f84d",
+              "parentUUID": "11cefb00-d2aa-4feb-87f1-5abd05900330",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "valida cadastro usuário sucesso",
               "fullTitle": "Testes - Cadastro de usuário valida cadastro usuário sucesso",
               "timedOut": null,
-              "duration": 4732,
+              "duration": 4885,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "user.email = faker.internet.email();\ncy.createUser(user.name, user.email, user.password);\ncy.contains(alertSelector, 'Cadastro realizado com sucesso').should('be.visible');\ncy.url().should('be.equal', `${baseUrl}home`);",
               "err": {},
-              "uuid": "d5d36594-103c-4dcd-af42-90cdef9851f8",
-              "parentUUID": "e987ec5c-a318-466e-a78b-8787b3a36751",
+              "uuid": "62e86d3c-0b24-4f8e-9561-8b36817f04fa",
+              "parentUUID": "11cefb00-d2aa-4feb-87f1-5abd05900330",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "valida cadastro sem senha",
               "fullTitle": "Testes - Cadastro de usuário valida cadastro sem senha",
               "timedOut": null,
-              "duration": 1549,
+              "duration": 1483,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,8 +83,8 @@
               "context": null,
               "code": "cy.get(nameSelector).type(user.name);\ncy.get(emailSelector).type(user.email);\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Password é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "e6d63657-9e4e-47c8-b298-622d8b2a2213",
-              "parentUUID": "e987ec5c-a318-466e-a78b-8787b3a36751",
+              "uuid": "1eda8cd4-a209-4546-a0d3-e269ce53be64",
+              "parentUUID": "11cefb00-d2aa-4feb-87f1-5abd05900330",
               "isHook": false,
               "skipped": false
             },
@@ -92,7 +92,7 @@
               "title": "valida email invalido",
               "fullTitle": "Testes - Cadastro de usuário valida email invalido",
               "timedOut": null,
-              "duration": 1144,
+              "duration": 1146,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -101,8 +101,8 @@
               "context": null,
               "code": "cy.get(nameSelector).type('Maria');\ncy.get(emailSelector).type('m@m');\ncy.get(passwordSelector).type('teste');\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Email deve ser um email válido').should('be.visible');",
               "err": {},
-              "uuid": "ce6f6af7-20f1-471f-9a09-0038aadb81bf",
-              "parentUUID": "e987ec5c-a318-466e-a78b-8787b3a36751",
+              "uuid": "df4b6ecd-385b-4f3a-8b48-1d53e03833be",
+              "parentUUID": "11cefb00-d2aa-4feb-87f1-5abd05900330",
               "isHook": false,
               "skipped": false
             },
@@ -110,7 +110,7 @@
               "title": "valida cadastro sem email",
               "fullTitle": "Testes - Cadastro de usuário valida cadastro sem email",
               "timedOut": null,
-              "duration": 941,
+              "duration": 1024,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -119,8 +119,8 @@
               "context": null,
               "code": "cy.get(nameSelector).type('Maria');\ncy.get(passwordSelector).type('teste');\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Email é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "3f6ebec8-6f9d-4f70-a226-bd8a416348f3",
-              "parentUUID": "e987ec5c-a318-466e-a78b-8787b3a36751",
+              "uuid": "8206a0bb-2508-4699-9b13-9cda99300bf9",
+              "parentUUID": "11cefb00-d2aa-4feb-87f1-5abd05900330",
               "isHook": false,
               "skipped": false
             },
@@ -128,7 +128,7 @@
               "title": "valida sem nome",
               "fullTitle": "Testes - Cadastro de usuário valida sem nome",
               "timedOut": null,
-              "duration": 1088,
+              "duration": 1128,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -137,8 +137,8 @@
               "context": null,
               "code": "cy.get(emailSelector).type('misael@email.com');\ncy.get(passwordSelector).type('teste');\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Nome é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "532f03bb-0487-430d-959b-9be712968854",
-              "parentUUID": "e987ec5c-a318-466e-a78b-8787b3a36751",
+              "uuid": "4c41e8d2-c8de-4475-9664-10ab4e090f92",
+              "parentUUID": "11cefb00-d2aa-4feb-87f1-5abd05900330",
               "isHook": false,
               "skipped": false
             },
@@ -146,7 +146,7 @@
               "title": "valida cadastro sem email, senha e nome",
               "fullTitle": "Testes - Cadastro de usuário valida cadastro sem email, senha e nome",
               "timedOut": null,
-              "duration": 527,
+              "duration": 581,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -155,26 +155,26 @@
               "context": null,
               "code": "cy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Email é obrigatório').should('be.visible');\ncy.contains(alertSelector, 'Password é obrigatório').should('be.visible');\ncy.contains(alertSelector, 'Nome é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "b8588351-d8fd-44a0-8b4c-bdfb94715270",
-              "parentUUID": "e987ec5c-a318-466e-a78b-8787b3a36751",
+              "uuid": "9f323a4b-d7e6-4d49-9db3-dfae663c98b1",
+              "parentUUID": "11cefb00-d2aa-4feb-87f1-5abd05900330",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a889f6e4-5623-40a4-abba-9518cc7a50da",
-            "d5d36594-103c-4dcd-af42-90cdef9851f8",
-            "e6d63657-9e4e-47c8-b298-622d8b2a2213",
-            "ce6f6af7-20f1-471f-9a09-0038aadb81bf",
-            "3f6ebec8-6f9d-4f70-a226-bd8a416348f3",
-            "532f03bb-0487-430d-959b-9be712968854",
-            "b8588351-d8fd-44a0-8b4c-bdfb94715270"
+            "d8fd6800-c4b5-4298-9f86-8bb1c915f84d",
+            "62e86d3c-0b24-4f8e-9561-8b36817f04fa",
+            "1eda8cd4-a209-4546-a0d3-e269ce53be64",
+            "df4b6ecd-385b-4f3a-8b48-1d53e03833be",
+            "8206a0bb-2508-4699-9b13-9cda99300bf9",
+            "4c41e8d2-c8de-4475-9664-10ab4e090f92",
+            "9f323a4b-d7e6-4d49-9db3-dfae663c98b1"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 15341,
+          "duration": 15647,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -204,7 +204,7 @@
         "useInlineDiffs": false,
         "code": true
       },
-      "version": "7.1.2"
+      "version": "7.1.3"
     },
     "marge": {
       "options": {
@@ -215,7 +215,7 @@
         "html": false,
         "json": true
       },
-      "version": "6.1.1"
+      "version": "6.2.0"
     }
   }
 }
