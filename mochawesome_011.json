@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-06-07T17:02:36.521Z",
-    "end": "2022-06-07T17:02:37.670Z",
-    "duration": 1149,
+    "start": "2022-06-12T19:29:10.206Z",
+    "end": "2022-06-12T19:29:11.424Z",
+    "duration": 1218,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "ef175306-c36d-4510-8126-3dec2e9b2c41",
+      "uuid": "3c2020d9-7e42-4ad0-a8c7-826a843ac79b",
       "title": "",
-      "fullFile": "cypress/integration/report.spec.js",
-      "file": "cypress/integration/report.spec.js",
+      "fullFile": "cypress/e2e/report.cy.js",
+      "file": "cypress/e2e/report.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "645d0882-70bf-40f2-8f4b-591ccf02954c",
+          "uuid": "b45049c6-e5ff-4a0d-8a95-c2ba236fe392",
           "title": "Testes - relatório",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "valida página de cadastro",
               "fullTitle": "Testes - relatório valida página de cadastro",
               "timedOut": null,
-              "duration": 1080,
+              "duration": 1160,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.url().should('be.equal', `${baseUrl}admin/relatorios`);\ncy.contains('h1', 'Em construção aguarde').should('be.visible');",
               "err": {},
-              "uuid": "19d96b19-6ae6-436d-a9b7-dfc9ef25b4f3",
-              "parentUUID": "645d0882-70bf-40f2-8f4b-591ccf02954c",
+              "uuid": "bdbce6b1-af0a-4b27-8602-c9a309a6c127",
+              "parentUUID": "b45049c6-e5ff-4a0d-8a95-c2ba236fe392",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "19d96b19-6ae6-436d-a9b7-dfc9ef25b4f3"
+            "bdbce6b1-af0a-4b27-8602-c9a309a6c127"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1080,
+          "duration": 1160,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
