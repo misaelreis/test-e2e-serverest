@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 9,
     "failures": -7,
-    "start": "2022-06-28T17:04:02.886Z",
-    "end": "2022-06-28T17:04:06.073Z",
-    "duration": 3187,
+    "start": "2022-07-05T17:04:39.216Z",
+    "end": "2022-07-05T17:04:42.250Z",
+    "duration": 3034,
     "testsRegistered": 10,
     "passPercent": 100,
     "pendingPercent": 90,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f4a7e131-c20b-44b4-b9f1-943b01781fff",
+      "uuid": "5e1f6088-f8f2-4c41-9f71-eff6ea685303",
       "title": "",
       "fullFile": "cypress/e2e/product.cy.js",
       "file": "cypress/e2e/product.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "09000850-ff3f-4571-8590-2aeb98b4a4f8",
+          "uuid": "01bd2faf-463e-4fa2-8fd4-ab13b8bfd2fe",
           "title": "Testes - Cadastro de produtos",
           "fullFile": "",
           "file": "",
@@ -47,8 +47,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "017cb166-cbbb-49e4-a420-d8d3af12f55b",
-              "parentUUID": "09000850-ff3f-4571-8590-2aeb98b4a4f8",
+              "uuid": "c149474b-4644-41d1-af14-0de7ba002816",
+              "parentUUID": "01bd2faf-463e-4fa2-8fd4-ab13b8bfd2fe",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Cadastrar produto com sucesso",
               "fullTitle": "Testes - Cadastro de produtos Cadastrar produto com sucesso",
               "timedOut": null,
-              "duration": 2874,
+              "duration": 2665,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.get(imageSelector).attachFile('cy.png');\ncy.get(nameSelector).type(prod.nome);\ncy.get(descriptionSelector).type(prod.descricao);\ncy.get(priceSelector).type(prod.preco);\ncy.get(quantitySelector).type(prod.quantidade);\ncy.get(btnCreateSelector).click();\ncy.url().should('be.equal', `${baseUrl}admin/listarprodutos`);",
               "err": {},
-              "uuid": "ae5b3a3b-be19-402e-8956-8940acdaa6f8",
-              "parentUUID": "09000850-ff3f-4571-8590-2aeb98b4a4f8",
+              "uuid": "4fd09ac8-fc27-4d89-9dc9-1c02cc014f08",
+              "parentUUID": "01bd2faf-463e-4fa2-8fd4-ab13b8bfd2fe",
               "isHook": false,
               "skipped": false
             },
@@ -83,8 +83,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "1075459d-e157-426e-beb8-7c7ce168fa61",
-              "parentUUID": "09000850-ff3f-4571-8590-2aeb98b4a4f8",
+              "uuid": "ebf377ad-8eb3-4d4c-a097-18d8377c2056",
+              "parentUUID": "01bd2faf-463e-4fa2-8fd4-ab13b8bfd2fe",
               "isHook": false,
               "skipped": false
             },
@@ -101,8 +101,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "10fdb328-dc71-43d1-b327-1809d6348bd9",
-              "parentUUID": "09000850-ff3f-4571-8590-2aeb98b4a4f8",
+              "uuid": "1f8965d4-e8e3-4534-ab08-52547e6ba627",
+              "parentUUID": "01bd2faf-463e-4fa2-8fd4-ab13b8bfd2fe",
               "isHook": false,
               "skipped": false
             },
@@ -119,8 +119,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "91e91911-89f8-41a9-9e89-89f2097c56c8",
-              "parentUUID": "09000850-ff3f-4571-8590-2aeb98b4a4f8",
+              "uuid": "2c16a927-5d04-4654-bb33-885afc0fdc31",
+              "parentUUID": "01bd2faf-463e-4fa2-8fd4-ab13b8bfd2fe",
               "isHook": false,
               "skipped": false
             },
@@ -137,8 +137,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "20e6e260-cf3f-4bed-8ae1-d5a2c00d4f69",
-              "parentUUID": "09000850-ff3f-4571-8590-2aeb98b4a4f8",
+              "uuid": "43bfca88-7eef-4a6c-8ed9-cd231e799579",
+              "parentUUID": "01bd2faf-463e-4fa2-8fd4-ab13b8bfd2fe",
               "isHook": false,
               "skipped": false
             },
@@ -155,8 +155,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "0f24d09b-9c5b-4f6f-bf1f-143eb6999e5d",
-              "parentUUID": "09000850-ff3f-4571-8590-2aeb98b4a4f8",
+              "uuid": "a64a4776-2608-4139-bff9-65c650f5a011",
+              "parentUUID": "01bd2faf-463e-4fa2-8fd4-ab13b8bfd2fe",
               "isHook": false,
               "skipped": false
             },
@@ -173,34 +173,34 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "7653fc4b-a38c-4fc9-a255-d241c7a3a8d8",
-              "parentUUID": "09000850-ff3f-4571-8590-2aeb98b4a4f8",
+              "uuid": "24579469-2418-412a-865d-c35ff54d841f",
+              "parentUUID": "01bd2faf-463e-4fa2-8fd4-ab13b8bfd2fe",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ae5b3a3b-be19-402e-8956-8940acdaa6f8"
+            "4fd09ac8-fc27-4d89-9dc9-1c02cc014f08"
           ],
           "failures": [],
           "pending": [
-            "017cb166-cbbb-49e4-a420-d8d3af12f55b",
-            "1075459d-e157-426e-beb8-7c7ce168fa61",
-            "10fdb328-dc71-43d1-b327-1809d6348bd9",
-            "91e91911-89f8-41a9-9e89-89f2097c56c8",
-            "20e6e260-cf3f-4bed-8ae1-d5a2c00d4f69",
-            "0f24d09b-9c5b-4f6f-bf1f-143eb6999e5d",
-            "7653fc4b-a38c-4fc9-a255-d241c7a3a8d8"
+            "c149474b-4644-41d1-af14-0de7ba002816",
+            "ebf377ad-8eb3-4d4c-a097-18d8377c2056",
+            "1f8965d4-e8e3-4534-ab08-52547e6ba627",
+            "2c16a927-5d04-4654-bb33-885afc0fdc31",
+            "43bfca88-7eef-4a6c-8ed9-cd231e799579",
+            "a64a4776-2608-4139-bff9-65c650f5a011",
+            "24579469-2418-412a-865d-c35ff54d841f"
           ],
           "skipped": [],
-          "duration": 2874,
+          "duration": 2665,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "78670d3e-6ffe-4ab6-8af8-03fd6d4f31a0",
+          "uuid": "43087088-1e47-4654-892f-252926d4db3d",
           "title": "Testes - Excluir produtos",
           "fullFile": "",
           "file": "",
@@ -220,8 +220,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "a3d263b3-ae70-4ac7-946d-622718c9d544",
-              "parentUUID": "78670d3e-6ffe-4ab6-8af8-03fd6d4f31a0",
+              "uuid": "ee1a30a4-b012-41f9-aada-59c168547606",
+              "parentUUID": "43087088-1e47-4654-892f-252926d4db3d",
               "isHook": false,
               "skipped": false
             },
@@ -238,8 +238,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "feb2ddcf-c5ea-4012-8bdb-ea9054f89dd1",
-              "parentUUID": "78670d3e-6ffe-4ab6-8af8-03fd6d4f31a0",
+              "uuid": "64b50a36-0c19-40f9-b108-5960404d912b",
+              "parentUUID": "43087088-1e47-4654-892f-252926d4db3d",
               "isHook": false,
               "skipped": false
             }
@@ -248,8 +248,8 @@
           "passes": [],
           "failures": [],
           "pending": [
-            "a3d263b3-ae70-4ac7-946d-622718c9d544",
-            "feb2ddcf-c5ea-4012-8bdb-ea9054f89dd1"
+            "ee1a30a4-b012-41f9-aada-59c168547606",
+            "64b50a36-0c19-40f9-b108-5960404d912b"
           ],
           "skipped": [],
           "duration": 0,
