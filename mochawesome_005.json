@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 5,
     "failures": -4,
-    "start": "2022-07-19T17:06:54.669Z",
-    "end": "2022-07-19T17:07:05.318Z",
-    "duration": 10649,
+    "start": "2022-07-26T16:58:31.116Z",
+    "end": "2022-07-26T16:58:42.110Z",
+    "duration": 10994,
     "testsRegistered": 7,
     "passPercent": 100,
     "pendingPercent": 71.42857142857143,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "7d291e4d-6a9f-4cbf-b7c7-d07b2b571239",
+      "uuid": "44ea2189-64dc-4f86-98c3-820bad0e657a",
       "title": "",
       "fullFile": "cypress/e2e/user.cy.js",
       "file": "cypress/e2e/user.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "9c21c163-73a2-46cc-b7f5-19770c791203",
+          "uuid": "99fb86f8-0c2e-4882-bb4c-633143f85044",
           "title": "Testes - Cadastro de usuário",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "valida cadastro usuário adm sucesso",
               "fullTitle": "Testes - Cadastro de usuário valida cadastro usuário adm sucesso",
               "timedOut": null,
-              "duration": 5406,
+              "duration": 5574,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "user.email = faker.internet.email();\ncy.createUserAdm(user.name, user.email, user.password);\ncy.contains(alertSelector, 'Cadastro realizado com sucesso').should('be.visible');\ncy.url().should('be.equal', `${baseUrl}admin/home`);",
               "err": {},
-              "uuid": "6d9e8be5-126a-4829-8439-689e08b4c33c",
-              "parentUUID": "9c21c163-73a2-46cc-b7f5-19770c791203",
+              "uuid": "81c9aea2-37c9-41b4-a4d2-29f3729fcc84",
+              "parentUUID": "99fb86f8-0c2e-4882-bb4c-633143f85044",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "valida cadastro usuário sucesso",
               "fullTitle": "Testes - Cadastro de usuário valida cadastro usuário sucesso",
               "timedOut": null,
-              "duration": 4678,
+              "duration": 4957,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "user.email = faker.internet.email();\ncy.createUser(user.name, user.email, user.password);\ncy.contains(alertSelector, 'Cadastro realizado com sucesso').should('be.visible');\ncy.url().should('be.equal', `${baseUrl}home`);",
               "err": {},
-              "uuid": "db9c4806-3ba9-4ed2-a568-edcb72a91216",
-              "parentUUID": "9c21c163-73a2-46cc-b7f5-19770c791203",
+              "uuid": "805b6871-2861-40b4-89b4-58a5c6dfc7a8",
+              "parentUUID": "99fb86f8-0c2e-4882-bb4c-633143f85044",
               "isHook": false,
               "skipped": false
             },
@@ -83,8 +83,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "fb1c4ecc-244f-4106-bc99-5f5fcdfd08df",
-              "parentUUID": "9c21c163-73a2-46cc-b7f5-19770c791203",
+              "uuid": "76b92023-0e05-472b-a5d9-1ddcf692dbde",
+              "parentUUID": "99fb86f8-0c2e-4882-bb4c-633143f85044",
               "isHook": false,
               "skipped": false
             },
@@ -101,8 +101,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "6bdc9656-dd91-48c9-886e-2fcccf70b22a",
-              "parentUUID": "9c21c163-73a2-46cc-b7f5-19770c791203",
+              "uuid": "1175014a-6a5e-4e3c-830f-08eeb1740499",
+              "parentUUID": "99fb86f8-0c2e-4882-bb4c-633143f85044",
               "isHook": false,
               "skipped": false
             },
@@ -119,8 +119,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "9b2e07d9-e37b-4910-9e7f-99214bf2697b",
-              "parentUUID": "9c21c163-73a2-46cc-b7f5-19770c791203",
+              "uuid": "7a162f11-8e9d-4769-92f4-5d2135608ec6",
+              "parentUUID": "99fb86f8-0c2e-4882-bb4c-633143f85044",
               "isHook": false,
               "skipped": false
             },
@@ -137,8 +137,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "78ce5b64-d2fe-4218-a291-79ce1f5f5f85",
-              "parentUUID": "9c21c163-73a2-46cc-b7f5-19770c791203",
+              "uuid": "85fa5134-d5b0-4e29-95da-43e9d935f819",
+              "parentUUID": "99fb86f8-0c2e-4882-bb4c-633143f85044",
               "isHook": false,
               "skipped": false
             },
@@ -155,27 +155,27 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "cb635e6d-e4b9-44fb-b9e9-23bd769b2e0b",
-              "parentUUID": "9c21c163-73a2-46cc-b7f5-19770c791203",
+              "uuid": "cc774ed1-b519-416d-bdab-de64f8f60b40",
+              "parentUUID": "99fb86f8-0c2e-4882-bb4c-633143f85044",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6d9e8be5-126a-4829-8439-689e08b4c33c",
-            "db9c4806-3ba9-4ed2-a568-edcb72a91216"
+            "81c9aea2-37c9-41b4-a4d2-29f3729fcc84",
+            "805b6871-2861-40b4-89b4-58a5c6dfc7a8"
           ],
           "failures": [],
           "pending": [
-            "fb1c4ecc-244f-4106-bc99-5f5fcdfd08df",
-            "6bdc9656-dd91-48c9-886e-2fcccf70b22a",
-            "9b2e07d9-e37b-4910-9e7f-99214bf2697b",
-            "78ce5b64-d2fe-4218-a291-79ce1f5f5f85",
-            "cb635e6d-e4b9-44fb-b9e9-23bd769b2e0b"
+            "76b92023-0e05-472b-a5d9-1ddcf692dbde",
+            "1175014a-6a5e-4e3c-830f-08eeb1740499",
+            "7a162f11-8e9d-4769-92f4-5d2135608ec6",
+            "85fa5134-d5b0-4e29-95da-43e9d935f819",
+            "cc774ed1-b519-416d-bdab-de64f8f60b40"
           ],
           "skipped": [],
-          "duration": 10084,
+          "duration": 10531,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
