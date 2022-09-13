@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 5,
     "failures": -3,
-    "start": "2022-09-06T17:02:22.247Z",
-    "end": "2022-09-06T17:02:27.938Z",
-    "duration": 5691,
+    "start": "2022-09-13T17:04:34.957Z",
+    "end": "2022-09-13T17:04:41.321Z",
+    "duration": 6364,
     "testsRegistered": 8,
     "passPercent": 100,
     "pendingPercent": 62.5,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "95d676f3-85ca-4e6d-917e-ff1ea267b056",
+      "uuid": "f8b64c41-fe7f-4f79-a184-7c6a201ec05d",
       "title": "",
       "fullFile": "cypress/e2e/listShopping.cy.js",
       "file": "cypress/e2e/listShopping.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6985ab73-906b-4818-8651-b9afdad63240",
+          "uuid": "279e6636-a2cf-430c-a851-392643f23066",
           "title": "Testes - Acessar lista de compra",
           "fullFile": "",
           "file": "",
@@ -47,8 +47,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "70a3a62c-3fd0-4208-9ed1-f53267df80ab",
-              "parentUUID": "6985ab73-906b-4818-8651-b9afdad63240",
+              "uuid": "5c1546cc-9727-4550-9b0c-d08fb2058a4b",
+              "parentUUID": "279e6636-a2cf-430c-a851-392643f23066",
               "isHook": false,
               "skipped": false
             },
@@ -65,8 +65,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "f3baf6bc-eeed-414b-a62c-5f2197448e79",
-              "parentUUID": "6985ab73-906b-4818-8651-b9afdad63240",
+              "uuid": "5d928186-c99e-40b5-ad64-a0f251cd2361",
+              "parentUUID": "279e6636-a2cf-430c-a851-392643f23066",
               "isHook": false,
               "skipped": false
             }
@@ -75,8 +75,8 @@
           "passes": [],
           "failures": [],
           "pending": [
-            "70a3a62c-3fd0-4208-9ed1-f53267df80ab",
-            "f3baf6bc-eeed-414b-a62c-5f2197448e79"
+            "5c1546cc-9727-4550-9b0c-d08fb2058a4b",
+            "5d928186-c99e-40b5-ad64-a0f251cd2361"
           ],
           "skipped": [],
           "duration": 0,
@@ -85,7 +85,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "1d888f38-43d5-4d6f-9757-6583ffa8cdd1",
+          "uuid": "e01c0d62-55af-46df-8011-51d8133f3b2e",
           "title": "Testes - Acessar lista de compra com produto",
           "fullFile": "",
           "file": "",
@@ -96,7 +96,7 @@
               "title": "Valida detalhes produto - voltar",
               "fullTitle": "Testes - Acessar lista de compra com produto Valida detalhes produto - voltar",
               "timedOut": null,
-              "duration": 2061,
+              "duration": 2305,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -105,8 +105,8 @@
               "context": null,
               "code": "cy.get(btnCarSelecto).click();\ncy.contains('h1', 'Detalhes do produto').should('be.visible');\ncy.get('[data-testid=product-detail-name]').should('have.text', 'Teste Zael Uai');\ncy.get('[data-testid=voltarHome]').click();\ncy.url().should('be.equal', `${baseUrl}home`);",
               "err": {},
-              "uuid": "c04d88a3-6d58-49a0-bba4-b5a1753d5080",
-              "parentUUID": "1d888f38-43d5-4d6f-9757-6583ffa8cdd1",
+              "uuid": "89079667-7fda-4612-b3fc-0e118fc80820",
+              "parentUUID": "e01c0d62-55af-46df-8011-51d8133f3b2e",
               "isHook": false,
               "skipped": false
             },
@@ -114,7 +114,7 @@
               "title": "Valida detalhes produto - adicionar lista",
               "fullTitle": "Testes - Acessar lista de compra com produto Valida detalhes produto - adicionar lista",
               "timedOut": null,
-              "duration": 1718,
+              "duration": 1862,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -123,8 +123,8 @@
               "context": null,
               "code": "cy.get(btnCarSelecto).click();\ncy.contains('h1', 'Detalhes do produto').should('be.visible');\ncy.get('[data-testid=product-detail-name]').should('have.text', 'Teste Zael Uai');\ncy.get('[data-testid=adicionarNaLista]').click();\ncy.url().should('be.equal', `${baseUrl}minhaListaDeProdutos`);\ncy.get('[data-testid=limparLista]').click();\ncy.contains('[data-testid=shopping-cart-empty-message]', 'Seu carrinho está vazio').should('be.visible');",
               "err": {},
-              "uuid": "63239364-c58f-4d84-b5ba-c812eb2b55f6",
-              "parentUUID": "1d888f38-43d5-4d6f-9757-6583ffa8cdd1",
+              "uuid": "d22741fc-682d-4e44-899b-018b6eea4338",
+              "parentUUID": "e01c0d62-55af-46df-8011-51d8133f3b2e",
               "isHook": false,
               "skipped": false
             },
@@ -141,8 +141,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "b2ad36fc-7df5-43f8-bbd3-3c111133864c",
-              "parentUUID": "1d888f38-43d5-4d6f-9757-6583ffa8cdd1",
+              "uuid": "c20426fa-3491-48a3-b40d-ca1d2b2a8b67",
+              "parentUUID": "e01c0d62-55af-46df-8011-51d8133f3b2e",
               "isHook": false,
               "skipped": false
             },
@@ -159,8 +159,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "6d6dd1f1-76f4-4471-8387-2ab04e15d37f",
-              "parentUUID": "1d888f38-43d5-4d6f-9757-6583ffa8cdd1",
+              "uuid": "6356616a-a0e4-41a2-aaf9-244f8fb4d39e",
+              "parentUUID": "e01c0d62-55af-46df-8011-51d8133f3b2e",
               "isHook": false,
               "skipped": false
             },
@@ -168,7 +168,7 @@
               "title": "Valida detalhes produto - Remover produtos",
               "fullTitle": "Testes - Acessar lista de compra com produto Valida detalhes produto - Remover produtos",
               "timedOut": null,
-              "duration": 1797,
+              "duration": 1989,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -177,8 +177,8 @@
               "context": null,
               "code": "cy.get(btnCarSelecto).click();\ncy.contains('h1', 'Detalhes do produto').should('be.visible');\ncy.get('[data-testid=product-detail-name]').should('have.text', 'Teste Zael Uai');\ncy.get('[data-testid=adicionarNaLista]').click();\ncy.get('[data-testid=product-increase-quantity]').click();\ncy.get('.row > :nth-child(3)').should('have.text', 2);\ncy.get('[data-testid=product-decrease-quantity]').click();\ncy.get('.row > :nth-child(3)').should('have.text', 1);",
               "err": {},
-              "uuid": "1b84ce8d-569e-46f5-9d20-0b2b846a1716",
-              "parentUUID": "1d888f38-43d5-4d6f-9757-6583ffa8cdd1",
+              "uuid": "1eaa3aca-42e3-4a93-9913-5db7d980d447",
+              "parentUUID": "e01c0d62-55af-46df-8011-51d8133f3b2e",
               "isHook": false,
               "skipped": false
             },
@@ -195,26 +195,26 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "4a50abca-0c9a-4b85-965e-73e2e63df67b",
-              "parentUUID": "1d888f38-43d5-4d6f-9757-6583ffa8cdd1",
+              "uuid": "e2e63db0-b5a9-4db8-ba1e-706feec57169",
+              "parentUUID": "e01c0d62-55af-46df-8011-51d8133f3b2e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c04d88a3-6d58-49a0-bba4-b5a1753d5080",
-            "63239364-c58f-4d84-b5ba-c812eb2b55f6",
-            "1b84ce8d-569e-46f5-9d20-0b2b846a1716"
+            "89079667-7fda-4612-b3fc-0e118fc80820",
+            "d22741fc-682d-4e44-899b-018b6eea4338",
+            "1eaa3aca-42e3-4a93-9913-5db7d980d447"
           ],
           "failures": [],
           "pending": [
-            "b2ad36fc-7df5-43f8-bbd3-3c111133864c",
-            "6d6dd1f1-76f4-4471-8387-2ab04e15d37f",
-            "4a50abca-0c9a-4b85-965e-73e2e63df67b"
+            "c20426fa-3491-48a3-b40d-ca1d2b2a8b67",
+            "6356616a-a0e4-41a2-aaf9-244f8fb4d39e",
+            "e2e63db0-b5a9-4db8-ba1e-706feec57169"
           ],
           "skipped": [],
-          "duration": 5576,
+          "duration": 6156,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
