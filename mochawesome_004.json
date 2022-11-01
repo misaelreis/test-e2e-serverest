@@ -5,20 +5,20 @@
     "passes": 0,
     "pending": 1,
     "failures": 0,
-    "start": "2022-10-25T17:32:50.818Z",
-    "end": "2022-10-25T17:32:50.853Z",
-    "duration": 35,
+    "start": "2022-11-01T17:05:07.010Z",
+    "end": "2022-11-01T17:05:07.029Z",
+    "duration": 19,
     "testsRegistered": 1,
     "passPercent": null,
     "pendingPercent": 100,
     "other": 0,
     "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "skipped": 1,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "6e73722a-d5b4-46a6-9fa6-77ed5c8fd18b",
+      "uuid": "76ed8921-d1f9-44ac-986f-1cf5d2888809",
       "title": "",
       "fullFile": "cypress/e2e/report.cy.js",
       "file": "cypress/e2e/report.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "799d3c94-f309-44ee-91f4-1573dc5f86da",
+          "uuid": "a726e325-13c3-499c-9844-1fcb21b62e6e",
           "title": "Testes - relatório",
           "fullFile": "",
           "file": "",
@@ -43,23 +43,23 @@
               "speed": null,
               "pass": false,
               "fail": false,
-              "pending": true,
+              "pending": false,
               "context": null,
-              "code": "",
+              "code": "cy.url().should('be.equal', `${baseUrl}admin/relatorios`);\ncy.contains('h1', 'Em construção aguarde').should('be.visible');",
               "err": {},
-              "uuid": "721aae1d-34f6-4c68-b61e-c42992f425d0",
-              "parentUUID": "799d3c94-f309-44ee-91f4-1573dc5f86da",
+              "uuid": "16d08c4d-2962-4123-98b8-0919d2674b88",
+              "parentUUID": "a726e325-13c3-499c-9844-1fcb21b62e6e",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [],
           "failures": [],
-          "pending": [
-            "721aae1d-34f6-4c68-b61e-c42992f425d0"
+          "pending": [],
+          "skipped": [
+            "16d08c4d-2962-4123-98b8-0919d2674b88"
           ],
-          "skipped": [],
           "duration": 0,
           "root": false,
           "rootEmpty": false,
