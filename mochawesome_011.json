@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-01-17T16:49:48.330Z",
-    "end": "2023-01-17T16:49:49.525Z",
-    "duration": 1195,
+    "start": "2023-01-24T16:49:48.923Z",
+    "end": "2023-01-24T16:49:50.028Z",
+    "duration": 1105,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d69c5d1c-5956-4c67-b3a6-7fa5d175f35f",
+      "uuid": "03ec1baf-59b8-45d7-97a9-6adfc50c1935",
       "title": "",
       "fullFile": "cypress/e2e/report.cy.js",
       "file": "cypress/e2e/report.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ef481528-4e2d-485b-b2a0-13a4980519c7",
+          "uuid": "0da4c132-543c-469a-8b0c-bc6bfde5f0c1",
           "title": "Testes - relatório",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "valida página de cadastro",
               "fullTitle": "Testes - relatório valida página de cadastro",
               "timedOut": null,
-              "duration": 1128,
+              "duration": 1025,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.url().should('be.equal', `${baseUrl}admin/relatorios`);\ncy.contains('h1', 'Em construção aguarde').should('be.visible');",
               "err": {},
-              "uuid": "48cfbaaf-d704-4d5e-a236-36431ce911fa",
-              "parentUUID": "ef481528-4e2d-485b-b2a0-13a4980519c7",
+              "uuid": "89cddb0b-97ac-4af1-b1b4-d4f5233b4213",
+              "parentUUID": "0da4c132-543c-469a-8b0c-bc6bfde5f0c1",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "48cfbaaf-d704-4d5e-a236-36431ce911fa"
+            "89cddb0b-97ac-4af1-b1b4-d4f5233b4213"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1128,
+          "duration": 1025,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
