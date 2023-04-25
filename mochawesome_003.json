@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 9,
     "failures": -7,
-    "start": "2023-04-18T16:38:36.354Z",
-    "end": "2023-04-18T16:38:39.213Z",
-    "duration": 2859,
+    "start": "2023-04-25T16:42:29.183Z",
+    "end": "2023-04-25T16:42:32.648Z",
+    "duration": 3465,
     "testsRegistered": 10,
     "passPercent": 100,
     "pendingPercent": 90,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8c07b7d0-a675-43ce-a05a-00ce00964e62",
+      "uuid": "327d4993-225d-4b12-8696-43522987181f",
       "title": "",
       "fullFile": "cypress/e2e/product.cy.js",
       "file": "cypress/e2e/product.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b18e5514-e846-4d4e-8056-0743e1f5eecc",
+          "uuid": "dc64bff8-bb12-4e7d-a9dc-90edcfe20b94",
           "title": "Testes - Cadastro de produtos",
           "fullFile": "",
           "file": "",
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.contains('h1', 'Cadastro de Produtos').should('be.visible');",
               "err": {},
-              "uuid": "dd4c1cd0-87ba-400a-a926-5edec75c43cc",
-              "parentUUID": "b18e5514-e846-4d4e-8056-0743e1f5eecc",
+              "uuid": "39523c67-79f3-43fa-9edb-7f08fd70e8d3",
+              "parentUUID": "dc64bff8-bb12-4e7d-a9dc-90edcfe20b94",
               "isHook": false,
               "skipped": true
             },
@@ -56,7 +56,7 @@
               "title": "Cadastrar produto com sucesso",
               "fullTitle": "Testes - Cadastro de produtos Cadastrar produto com sucesso",
               "timedOut": null,
-              "duration": 2688,
+              "duration": 3183,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.get(imageSelector).attachFile('cy.png');\ncy.get(nameSelector).type(prod.nome);\ncy.get(descriptionSelector).type(prod.descricao);\ncy.get(priceSelector).type(prod.preco);\ncy.get(quantitySelector).type(prod.quantidade);\ncy.get(btnCreateSelector).click();\ncy.url().should('be.equal', `${baseUrl}admin/listarprodutos`);",
               "err": {},
-              "uuid": "53e88cbe-f8e9-42a5-b1b7-4f91c57212df",
-              "parentUUID": "b18e5514-e846-4d4e-8056-0743e1f5eecc",
+              "uuid": "ec330823-56a3-4c6f-8a51-1ecf5e174bd7",
+              "parentUUID": "dc64bff8-bb12-4e7d-a9dc-90edcfe20b94",
               "isHook": false,
               "skipped": false
             },
@@ -83,8 +83,8 @@
               "context": null,
               "code": "cy.get(descriptionSelector).type(prod.descricao);\ncy.get(priceSelector).type(prod.preco);\ncy.get(quantitySelector).type(prod.quantidade);\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Nome é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "7a5722fa-2723-4d9e-972f-ebb1870232ef",
-              "parentUUID": "b18e5514-e846-4d4e-8056-0743e1f5eecc",
+              "uuid": "6e19a946-601b-4a6b-9b4c-b23cbc3b80ea",
+              "parentUUID": "dc64bff8-bb12-4e7d-a9dc-90edcfe20b94",
               "isHook": false,
               "skipped": true
             },
@@ -101,8 +101,8 @@
               "context": null,
               "code": "cy.get(nameSelector).type(prod.nome);\ncy.get(priceSelector).type(prod.preco);\ncy.get(quantitySelector).type(prod.quantidade);\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Descricao é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "f6ce8896-3ace-4fde-b5aa-bddcdeed2ffd",
-              "parentUUID": "b18e5514-e846-4d4e-8056-0743e1f5eecc",
+              "uuid": "0d11b263-8c27-4c7a-a734-aca9c9691272",
+              "parentUUID": "dc64bff8-bb12-4e7d-a9dc-90edcfe20b94",
               "isHook": false,
               "skipped": true
             },
@@ -119,8 +119,8 @@
               "context": null,
               "code": "cy.get(imageSelector).attachFile('cy.png');\ncy.get(nameSelector).type(prod.nome);\ncy.get(descriptionSelector).type(prod.descricao);\ncy.get(quantitySelector).type(prod.quantidade);\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Preco é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "0e1043c3-ed7a-4891-9a44-990f59529c4b",
-              "parentUUID": "b18e5514-e846-4d4e-8056-0743e1f5eecc",
+              "uuid": "fdd4b448-22ff-40b3-aefc-245e74aab812",
+              "parentUUID": "dc64bff8-bb12-4e7d-a9dc-90edcfe20b94",
               "isHook": false,
               "skipped": true
             },
@@ -137,8 +137,8 @@
               "context": null,
               "code": "cy.get(imageSelector).attachFile('cy.png');\ncy.get(nameSelector).type(prod.nome);\ncy.get(descriptionSelector).type(prod.descricao);\ncy.get(priceSelector).type('a');\ncy.get(quantitySelector).type(prod.quantidade);\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Preco é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "aad0735b-5566-48f6-a131-1764aa61641f",
-              "parentUUID": "b18e5514-e846-4d4e-8056-0743e1f5eecc",
+              "uuid": "87137dd2-9663-4281-9e14-ae8aedfe7574",
+              "parentUUID": "dc64bff8-bb12-4e7d-a9dc-90edcfe20b94",
               "isHook": false,
               "skipped": true
             },
@@ -155,8 +155,8 @@
               "context": null,
               "code": "cy.get(imageSelector).attachFile('cy.png');\ncy.get(nameSelector).type(prod.nome);\ncy.get(descriptionSelector).type(prod.descricao);\ncy.get(priceSelector).type(prod.preco);\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Quantidade é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "31e448ba-649c-4ea5-bf6a-18e1714a1d9f",
-              "parentUUID": "b18e5514-e846-4d4e-8056-0743e1f5eecc",
+              "uuid": "7a4b6bf7-5e49-4ad6-82fc-fa74065388a9",
+              "parentUUID": "dc64bff8-bb12-4e7d-a9dc-90edcfe20b94",
               "isHook": false,
               "skipped": true
             },
@@ -173,34 +173,34 @@
               "context": null,
               "code": "cy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Preco é obrigatório').should('be.visible');\ncy.contains(alertSelector, 'Quantidade é obrigatório').should('be.visible');\ncy.contains(alertSelector, 'Nome é obrigatório').should('be.visible');\ncy.contains(alertSelector, 'Descricao é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "43c25968-e1ac-4874-925b-9c20aeb33272",
-              "parentUUID": "b18e5514-e846-4d4e-8056-0743e1f5eecc",
+              "uuid": "6f818baa-ee29-4d82-8b48-607e4680c35f",
+              "parentUUID": "dc64bff8-bb12-4e7d-a9dc-90edcfe20b94",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "53e88cbe-f8e9-42a5-b1b7-4f91c57212df"
+            "ec330823-56a3-4c6f-8a51-1ecf5e174bd7"
           ],
           "failures": [],
           "pending": [],
           "skipped": [
-            "dd4c1cd0-87ba-400a-a926-5edec75c43cc",
-            "7a5722fa-2723-4d9e-972f-ebb1870232ef",
-            "f6ce8896-3ace-4fde-b5aa-bddcdeed2ffd",
-            "0e1043c3-ed7a-4891-9a44-990f59529c4b",
-            "aad0735b-5566-48f6-a131-1764aa61641f",
-            "31e448ba-649c-4ea5-bf6a-18e1714a1d9f",
-            "43c25968-e1ac-4874-925b-9c20aeb33272"
+            "39523c67-79f3-43fa-9edb-7f08fd70e8d3",
+            "6e19a946-601b-4a6b-9b4c-b23cbc3b80ea",
+            "0d11b263-8c27-4c7a-a734-aca9c9691272",
+            "fdd4b448-22ff-40b3-aefc-245e74aab812",
+            "87137dd2-9663-4281-9e14-ae8aedfe7574",
+            "7a4b6bf7-5e49-4ad6-82fc-fa74065388a9",
+            "6f818baa-ee29-4d82-8b48-607e4680c35f"
           ],
-          "duration": 2688,
+          "duration": 3183,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "cf27c0a4-b912-4df9-96cf-8ed651f6a8c7",
+          "uuid": "09059a27-61a7-4fc7-899c-816abbe76b5f",
           "title": "Testes - Excluir produtos",
           "fullFile": "",
           "file": "",
@@ -220,8 +220,8 @@
               "context": null,
               "code": "cy.contains('h1', 'Lista dos Produtos').should('be.visible');",
               "err": {},
-              "uuid": "22b873e8-3f2a-452d-8e03-9259ad0c9ee5",
-              "parentUUID": "cf27c0a4-b912-4df9-96cf-8ed651f6a8c7",
+              "uuid": "b999d91b-e0af-4f7c-9696-a38802c1ac15",
+              "parentUUID": "09059a27-61a7-4fc7-899c-816abbe76b5f",
               "isHook": false,
               "skipped": true
             },
@@ -238,8 +238,8 @@
               "context": null,
               "code": "cy.get(':nth-child(1) > :nth-child(6) > .row > .btn-danger').click();",
               "err": {},
-              "uuid": "d8b87a66-2183-4809-8d4f-7c0b76916dc6",
-              "parentUUID": "cf27c0a4-b912-4df9-96cf-8ed651f6a8c7",
+              "uuid": "da91a7d3-8ef8-46f3-b030-1a88d587af88",
+              "parentUUID": "09059a27-61a7-4fc7-899c-816abbe76b5f",
               "isHook": false,
               "skipped": true
             }
@@ -249,8 +249,8 @@
           "failures": [],
           "pending": [],
           "skipped": [
-            "22b873e8-3f2a-452d-8e03-9259ad0c9ee5",
-            "d8b87a66-2183-4809-8d4f-7c0b76916dc6"
+            "b999d91b-e0af-4f7c-9696-a38802c1ac15",
+            "da91a7d3-8ef8-46f3-b030-1a88d587af88"
           ],
           "duration": 0,
           "root": false,
