@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 7,
     "failures": -4,
-    "start": "2023-06-13T16:42:53.002Z",
-    "end": "2023-06-13T16:42:58.211Z",
-    "duration": 5209,
+    "start": "2023-06-20T16:42:17.758Z",
+    "end": "2023-06-20T16:42:22.325Z",
+    "duration": 4567,
     "testsRegistered": 9,
     "passPercent": 100,
     "pendingPercent": 77.77777777777779,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "6907acd4-18fb-43d5-839f-5a1d85bc8204",
+      "uuid": "b6d1c395-9b8b-4b73-bbca-948450b84c48",
       "title": "",
       "fullFile": "cypress/e2e/userAdm.cy.js",
       "file": "cypress/e2e/userAdm.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3ef5ae8c-8a29-4d57-aad5-4d2e113f3084",
+          "uuid": "36919cd2-d69e-488a-95cc-2410aa9b27ee",
           "title": "Testes - Cadastro de usuário Adm",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "valida cadastro usuário adm sucesso",
               "fullTitle": "Testes - Cadastro de usuário Adm valida cadastro usuário adm sucesso",
               "timedOut": null,
-              "duration": 2909,
+              "duration": 2586,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "user.email = faker.internet.email();\ncy.createUserAdminAdm(user.name, user.email, user.password);\ncy.url().should('be.equal', `${baseUrl}admin/listarusuarios`);",
               "err": {},
-              "uuid": "9a47e4df-fbea-4c7c-861e-0ce6c774cdd0",
-              "parentUUID": "3ef5ae8c-8a29-4d57-aad5-4d2e113f3084",
+              "uuid": "5940a20c-d256-4cb0-8a69-1468355674c6",
+              "parentUUID": "36919cd2-d69e-488a-95cc-2410aa9b27ee",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "valida cadastro usuário sucesso",
               "fullTitle": "Testes - Cadastro de usuário Adm valida cadastro usuário sucesso",
               "timedOut": null,
-              "duration": 2064,
+              "duration": 1746,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "user.email = faker.internet.email();\ncy.createAdminUser(user.name, user.email, user.password);\ncy.url().should('be.equal', `${baseUrl}admin/listarusuarios`);",
               "err": {},
-              "uuid": "7da910f1-2a8a-4acd-91dc-4e5a11b90e7f",
-              "parentUUID": "3ef5ae8c-8a29-4d57-aad5-4d2e113f3084",
+              "uuid": "450ed6fd-bc3f-44f0-802e-dd40c15d33b1",
+              "parentUUID": "36919cd2-d69e-488a-95cc-2410aa9b27ee",
               "isHook": false,
               "skipped": false
             },
@@ -83,8 +83,8 @@
               "context": null,
               "code": "cy.get(nameSelector).type(user.name);\ncy.get(emailSelector).type(user.email);\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Password é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "000b2452-80c3-429a-b927-5cb78f5232fe",
-              "parentUUID": "3ef5ae8c-8a29-4d57-aad5-4d2e113f3084",
+              "uuid": "361566f4-f89b-4608-9efb-27ff328d4dcc",
+              "parentUUID": "36919cd2-d69e-488a-95cc-2410aa9b27ee",
               "isHook": false,
               "skipped": true
             },
@@ -101,8 +101,8 @@
               "context": null,
               "code": "cy.get(nameSelector).type(user.name);\ncy.get(emailSelector).type('m@m');\ncy.get(passwordSelector).type('teste');\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Email deve ser um email válido').should('be.visible');",
               "err": {},
-              "uuid": "ac07d942-db3a-41b8-b099-900ad547a0c9",
-              "parentUUID": "3ef5ae8c-8a29-4d57-aad5-4d2e113f3084",
+              "uuid": "19e274b2-1b3a-4e2e-9632-5bdd7c5bfc29",
+              "parentUUID": "36919cd2-d69e-488a-95cc-2410aa9b27ee",
               "isHook": false,
               "skipped": true
             },
@@ -119,8 +119,8 @@
               "context": null,
               "code": "cy.get(nameSelector).type(user.name);\ncy.get(passwordSelector).type('teste');\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Email é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "92c17451-c186-4467-b3a5-a29a7eead468",
-              "parentUUID": "3ef5ae8c-8a29-4d57-aad5-4d2e113f3084",
+              "uuid": "31fa2415-a982-424a-b515-4fb7a4724532",
+              "parentUUID": "36919cd2-d69e-488a-95cc-2410aa9b27ee",
               "isHook": false,
               "skipped": true
             },
@@ -137,8 +137,8 @@
               "context": null,
               "code": "cy.get(emailSelector).type('misael@mailer.com');\ncy.get(passwordSelector).type('teste');\ncy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Nome é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "d3967be6-6520-4c16-b1f4-885057d69e4e",
-              "parentUUID": "3ef5ae8c-8a29-4d57-aad5-4d2e113f3084",
+              "uuid": "ee342c02-bb58-4598-a26e-359971029223",
+              "parentUUID": "36919cd2-d69e-488a-95cc-2410aa9b27ee",
               "isHook": false,
               "skipped": true
             },
@@ -155,33 +155,33 @@
               "context": null,
               "code": "cy.get(btnCreateSelector).click();\ncy.contains(alertSelector, 'Email é obrigatório').should('be.visible');\ncy.contains(alertSelector, 'Nome é obrigatório').should('be.visible');\ncy.contains(alertSelector, 'Password é obrigatório').should('be.visible');",
               "err": {},
-              "uuid": "339fab63-3529-4d90-8a24-166e60d78ef4",
-              "parentUUID": "3ef5ae8c-8a29-4d57-aad5-4d2e113f3084",
+              "uuid": "7cd5f01e-34c2-48aa-b069-d97aef66d793",
+              "parentUUID": "36919cd2-d69e-488a-95cc-2410aa9b27ee",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "9a47e4df-fbea-4c7c-861e-0ce6c774cdd0",
-            "7da910f1-2a8a-4acd-91dc-4e5a11b90e7f"
+            "5940a20c-d256-4cb0-8a69-1468355674c6",
+            "450ed6fd-bc3f-44f0-802e-dd40c15d33b1"
           ],
           "failures": [],
           "pending": [],
           "skipped": [
-            "000b2452-80c3-429a-b927-5cb78f5232fe",
-            "ac07d942-db3a-41b8-b099-900ad547a0c9",
-            "92c17451-c186-4467-b3a5-a29a7eead468",
-            "d3967be6-6520-4c16-b1f4-885057d69e4e",
-            "339fab63-3529-4d90-8a24-166e60d78ef4"
+            "361566f4-f89b-4608-9efb-27ff328d4dcc",
+            "19e274b2-1b3a-4e2e-9632-5bdd7c5bfc29",
+            "31fa2415-a982-424a-b515-4fb7a4724532",
+            "ee342c02-bb58-4598-a26e-359971029223",
+            "7cd5f01e-34c2-48aa-b069-d97aef66d793"
           ],
-          "duration": 4973,
+          "duration": 4332,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "5050dbe5-3a2e-4bbf-b962-45e9366e594b",
+          "uuid": "cf599961-6acb-4c25-ba50-9bbf2803063e",
           "title": "Testes - Listar usuários Adm",
           "fullFile": "",
           "file": "",
@@ -201,8 +201,8 @@
               "context": null,
               "code": "cy.contains('h1', 'Lista dos usuários').should('be.visible');\ncy.contains('thead > tr > :nth-child(1)', 'Nome').should('be.visible');\ncy.contains('thead > tr > :nth-child(2)', 'Email').should('be.visible');\ncy.contains('thead > tr > :nth-child(3)', 'Senha').should('be.visible');\ncy.contains('thead > tr > :nth-child(4)', 'Administrador').should('be.visible');\ncy.contains('thead > tr > :nth-child(5)', 'Ações').should('be.visible');\ncy.get(':nth-child(1) > :nth-child(5) > .row > .btn-info').should('be.visible');\ncy.get(':nth-child(4) > :nth-child(5) > .row > .btn-danger').should('be.visible');",
               "err": {},
-              "uuid": "3051be0d-0a91-4c8e-b409-ffb6b1a27460",
-              "parentUUID": "5050dbe5-3a2e-4bbf-b962-45e9366e594b",
+              "uuid": "b4efcf77-93f6-4285-9a0d-728af414674b",
+              "parentUUID": "cf599961-6acb-4c25-ba50-9bbf2803063e",
               "isHook": false,
               "skipped": true
             }
@@ -212,7 +212,7 @@
           "failures": [],
           "pending": [],
           "skipped": [
-            "3051be0d-0a91-4c8e-b409-ffb6b1a27460"
+            "b4efcf77-93f6-4285-9a0d-728af414674b"
           ],
           "duration": 0,
           "root": false,
@@ -220,7 +220,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "718fd705-3014-466c-b468-712dd4cdd653",
+          "uuid": "40d91f5a-4b68-4ba6-a322-bbebb1366879",
           "title": "Testes - Listar usuários Adm",
           "fullFile": "",
           "file": "",
@@ -240,8 +240,8 @@
               "context": null,
               "code": "cy.get(':nth-child(4) > :nth-child(5) > .row > .btn-danger').click();\ncy.url().should('be.equal', `${baseUrl}admin/listarusuarios`); // não tem mensagem de exclusão de usuário",
               "err": {},
-              "uuid": "2d8eb2ff-73d1-456e-a38e-b6d4c9369855",
-              "parentUUID": "718fd705-3014-466c-b468-712dd4cdd653",
+              "uuid": "61f7d83e-008e-40f8-a355-21bb79432c03",
+              "parentUUID": "40d91f5a-4b68-4ba6-a322-bbebb1366879",
               "isHook": false,
               "skipped": true
             }
@@ -251,7 +251,7 @@
           "failures": [],
           "pending": [],
           "skipped": [
-            "2d8eb2ff-73d1-456e-a38e-b6d4c9369855"
+            "61f7d83e-008e-40f8-a355-21bb79432c03"
           ],
           "duration": 0,
           "root": false,
