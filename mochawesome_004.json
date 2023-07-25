@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 1,
     "failures": 0,
-    "start": "2023-07-18T16:44:26.912Z",
-    "end": "2023-07-18T16:44:26.946Z",
-    "duration": 34,
+    "start": "2023-07-25T16:43:10.207Z",
+    "end": "2023-07-25T16:43:10.254Z",
+    "duration": 47,
     "testsRegistered": 1,
     "passPercent": null,
     "pendingPercent": 100,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "98b1d26a-9474-4fe6-96bb-96059cccc6fa",
+      "uuid": "6be83097-297c-4250-b89e-79bded302bbb",
       "title": "",
       "fullFile": "cypress/e2e/report.cy.js",
       "file": "cypress/e2e/report.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bb4f86cc-7373-4b07-9bd7-a76741e17209",
+          "uuid": "69e6b7ac-2828-4140-9a72-a99429108c1c",
           "title": "Testes - relatório",
           "fullFile": "",
           "file": "",
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.url().should('be.equal', `${baseUrl}admin/relatorios`);\ncy.contains('h1', 'Em construção aguarde').should('be.visible');",
               "err": {},
-              "uuid": "87f4d8d0-73ff-4931-b4ae-f0660238c913",
-              "parentUUID": "bb4f86cc-7373-4b07-9bd7-a76741e17209",
+              "uuid": "d8f5232a-6185-43f7-ae45-e13e5d0f007b",
+              "parentUUID": "69e6b7ac-2828-4140-9a72-a99429108c1c",
               "isHook": false,
               "skipped": true
             }
@@ -58,7 +58,7 @@
           "failures": [],
           "pending": [],
           "skipped": [
-            "87f4d8d0-73ff-4931-b4ae-f0660238c913"
+            "d8f5232a-6185-43f7-ae45-e13e5d0f007b"
           ],
           "duration": 0,
           "root": false,
